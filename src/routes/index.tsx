@@ -73,7 +73,7 @@ function Home() {
                 href="mailto:rachel@mindcet.io?subject=הרשמה לקוהורט Unboxing Challenge&body=שלום רחל,%0D%0Aאנחנו מעוניינים לפתוח קוהורט Unboxing Challenge.%0D%0Aשם הגוף:%0D%0Aאיש קשר:%0D%0Aטלפון:%0D%0Aמספר משתתפים משוער:"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold px-6 py-3 rounded-full hover:opacity-90 transition shadow-[0_10px_40px_-10px_oklch(0.78_0.18_55/0.6)]"
               >
-                להרשמה ולפתיחת קוהורט ←
+                להרשמה ←
               </a>
               <a
                 href="mailto:rachel@mindcet.io?subject=בקשת מידע נוסף – Unboxing Challenge"
