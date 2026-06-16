@@ -39,34 +39,35 @@
 
 :root {
   --radius: 0.75rem;
-  /* Deep navy from the flyer */
-  --background: oklch(0.18 0.09 270);
-  --foreground: oklch(0.98 0.005 250);
-  --card: oklch(0.23 0.08 270);
-  --card-foreground: oklch(0.98 0.005 250);
-  --popover: oklch(0.23 0.08 270);
-  --popover-foreground: oklch(0.98 0.005 250);
-  /* Bright orange accent */
-  --primary: oklch(0.78 0.18 55);
-  --primary-foreground: oklch(0.15 0.08 270);
-  --secondary: oklch(0.28 0.07 270);
-  --secondary-foreground: oklch(0.98 0.005 250);
-  --muted: oklch(0.28 0.07 270);
-  --muted-foreground: oklch(0.78 0.03 260);
-  --accent: oklch(0.78 0.18 55);
-  --accent-foreground: oklch(0.15 0.08 270);
-  --destructive: oklch(0.65 0.22 25);
+  /* Soft dark charcoal / slate */
+  --background: oklch(0.22 0.012 260);
+  --foreground: oklch(0.96 0.005 250);
+  --card: oklch(0.26 0.014 260);
+  --card-foreground: oklch(0.96 0.005 250);
+  --popover: oklch(0.26 0.014 260);
+  --popover-foreground: oklch(0.96 0.005 250);
+  /* Muted coral / terracotta accent */
+  --primary: oklch(0.72 0.11 35);
+  --primary-foreground: oklch(0.18 0.01 260);
+  --secondary: oklch(0.3 0.012 260);
+  --secondary-foreground: oklch(0.96 0.005 250);
+  --muted: oklch(0.3 0.012 260);
+  --muted-foreground: oklch(0.74 0.012 260);
+  --accent: oklch(0.72 0.11 35);
+  --accent-foreground: oklch(0.18 0.01 260);
+  --destructive: oklch(0.6 0.15 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.35 0.07 270);
-  --input: oklch(0.3 0.07 270);
-  --ring: oklch(0.78 0.18 55);
+  --border: oklch(0.34 0.012 260);
+  --input: oklch(0.3 0.012 260);
+  --ring: oklch(0.72 0.11 35);
 
-  /* Geometric shape accent colors from the flyer */
-  --shape-pink: oklch(0.7 0.25 350);
-  --shape-purple: oklch(0.55 0.27 285);
-  --shape-green: oklch(0.78 0.2 145);
-  --shape-yellow: oklch(0.85 0.18 90);
+  /* Soft blob accent tints */
+  --shape-pink: oklch(0.7 0.08 20);
+  --shape-purple: oklch(0.5 0.08 285);
+  --shape-green: oklch(0.65 0.07 165);
+  --shape-yellow: oklch(0.78 0.08 80);
 }
+
 
 @layer base {
   * { border-color: var(--color-border); }

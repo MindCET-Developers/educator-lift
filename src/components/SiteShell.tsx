@@ -1,25 +1,25 @@
 import { Link, Outlet } from "@tanstack/react-router";
 import logo from "@/assets/Mindcet-logo.png.asset.json";
 
-function Triangle({ className, color }: { className?: string; color: string }) {
-  return (
-    <svg viewBox="0 0 100 100" className={className} aria-hidden>
-      <polygon points="50,5 95,95 5,95" fill={color} />
-    </svg>
-  );
-}
-
 export function BackgroundShapes() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden -z-10">
-      <Triangle color="var(--shape-yellow)" className="absolute top-10 right-[-30px] w-32 rotate-[20deg] opacity-90" />
-      <Triangle color="var(--shape-purple)" className="absolute top-40 left-[-40px] w-56 rotate-[200deg] opacity-90" />
-      <Triangle color="var(--shape-pink)" className="absolute top-[55%] right-[-20px] w-24 rotate-[-15deg] opacity-90" />
-      <Triangle color="var(--shape-green)" className="absolute bottom-20 left-[8%] w-28 rotate-[140deg] opacity-90" />
-      <Triangle color="var(--shape-yellow)" className="absolute bottom-[40%] left-[45%] w-14 rotate-[60deg] opacity-80" />
+      <div
+        className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full opacity-30 blur-3xl"
+        style={{ background: "var(--shape-pink)" }}
+      />
+      <div
+        className="absolute top-1/3 -left-40 w-[520px] h-[520px] rounded-full opacity-25 blur-3xl"
+        style={{ background: "var(--shape-purple)" }}
+      />
+      <div
+        className="absolute bottom-0 right-1/4 w-[420px] h-[420px] rounded-full opacity-20 blur-3xl"
+        style={{ background: "var(--shape-green)" }}
+      />
     </div>
   );
 }
+
 
 export default function SiteShell() {
   return (
