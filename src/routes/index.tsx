@@ -212,7 +212,7 @@ function Home() {
       {/* PARTNERS */}
       <section className="max-w-6xl mx-auto px-6 pb-16">
         <p className="text-center text-sm text-muted-foreground">
-          בשיתוף: מטח · מישרים · ברנקו וייס · יד הנדיב / Yad Hanadiv
+          &nbsp;
         </p>
       </section>
     </div>
