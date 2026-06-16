@@ -88,9 +88,7 @@ function Home() {
               <Stat n="15,000₪" l="לאחר סבסוד" />
             </div>
           </div>
-          <div className="relative">
-            <img src={hero.url} alt="Unboxing Challenge – הכשרת מורים מובילים" className="w-full rounded-3xl shadow-2xl shadow-black/50 border border-white/10" />
-          </div>
+          {/* Hero image removed */}
         </div>
       </section>
 
