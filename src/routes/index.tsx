@@ -84,7 +84,7 @@ function Home() {
             </div>
             <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm">
               <Stat n="10" l="מפגשים" />
-              <Stat n="30" l="שעות שתלמות" />
+              <Stat n="30" l="שעות השתלמות" />
               <Stat n="15,000₪" l="לאחר סבסוד" />
             </div>
           </div>
