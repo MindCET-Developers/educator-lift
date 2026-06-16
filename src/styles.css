@@ -46,20 +46,20 @@
   --card-foreground: oklch(0.96 0.005 250);
   --popover: oklch(0.26 0.014 260);
   --popover-foreground: oklch(0.96 0.005 250);
-  /* Muted coral / terracotta accent */
-  --primary: oklch(0.72 0.11 35);
+  /* Warm orange accent – MindCET vibe */
+  --primary: oklch(0.7 0.14 45);
   --primary-foreground: oklch(0.18 0.01 260);
   --secondary: oklch(0.3 0.012 260);
   --secondary-foreground: oklch(0.96 0.005 250);
   --muted: oklch(0.3 0.012 260);
   --muted-foreground: oklch(0.74 0.012 260);
-  --accent: oklch(0.72 0.11 35);
+  --accent: oklch(0.7 0.14 45);
   --accent-foreground: oklch(0.18 0.01 260);
   --destructive: oklch(0.6 0.15 25);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.34 0.012 260);
   --input: oklch(0.3 0.012 260);
-  --ring: oklch(0.72 0.11 35);
+  --ring: oklch(0.7 0.14 45);
 
   /* Soft blob accent tints */
   --shape-pink: oklch(0.7 0.08 20);
