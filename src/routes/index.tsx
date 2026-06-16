@@ -194,7 +194,7 @@ function Home() {
               </div>
             </div>
             <div className="bg-background/50 border border-white/10 rounded-2xl p-6 backdrop-blur">
-              <div className="text-sm text-muted-foreground">לפתיחת קוהורט או מידע נוסף:</div>
+              <div className="text-sm text-muted-foreground">לפתיחת קבוצת הכשרה או מידע נוסף:</div>
               <a href="mailto:rachel@mindcet.io?subject=פתיחת קוהורט Unboxing Challenge" className="block mt-2 text-2xl font-bold text-primary hover:underline break-all">
                 rachel@mindcet.io
               </a>
