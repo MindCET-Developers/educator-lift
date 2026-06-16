@@ -199,7 +199,7 @@ function Home() {
                 rachel@mindcet.io
               </a>
               <a
-                href="mailto:rachel@mindcet.io?subject=פתיחת קוהורט Unboxing Challenge&body=שלום רחל,%0D%0Aאנחנו מעוניינים לפתוח קוהורט Unboxing Challenge.%0D%0A%0D%0Aשם הגוף (פסג\"ה / מועצה / רשת):%0D%0Aאיש קשר ותפקיד:%0D%0Aטלפון:%0D%0Aמספר משתתפים משוער:%0D%0Aמועד רצוי לפתיחה:"
+                href={'mailto:rachel@mindcet.io?subject=פתיחת קוהורט Unboxing Challenge&body=שלום רחל,%0D%0Aאנחנו מעוניינים לפתוח קוהורט Unboxing Challenge.%0D%0A%0D%0Aשם הגוף (פסג"ה / מועצה / רשת):%0D%0Aאיש קשר ותפקיד:%0D%0Aטלפון:%0D%0Aמספר משתתפים משוער:%0D%0Aמועד רצוי לפתיחה:'}
                 className="mt-5 w-full inline-flex justify-center bg-primary text-primary-foreground font-bold px-6 py-3 rounded-full hover:opacity-90 transition"
               >
                 שלחו לנו מייל ←
