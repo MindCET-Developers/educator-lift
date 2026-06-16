@@ -183,7 +183,7 @@ function Home() {
           <div className="relative grid md:grid-cols-[1.3fr_1fr] gap-10 items-center">
             <div>
               <div className="text-primary font-bold uppercase tracking-wider text-sm">פתיחת קוהורט</div>
-              <h2 className="text-4xl md:text-5xl mt-3">רוצים לפתוח קוהורט אצלכם?</h2>
+              <h2 className="text-4xl md:text-5xl mt-3">רשויות, מרכזי פסג"ה ורשתות חינוך- רוצים לפתוח קבוצה אצלכם?</h2>
               <p className="mt-5 text-lg text-muted-foreground">
                 העלות משולמת על ידי הפסג"ה ו/או המועצה המקומית. אנחנו דואגים לכל השאר –
                 מנחים, חומרים, פלטפורמה וקהילה.
