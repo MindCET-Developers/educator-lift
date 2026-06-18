@@ -189,7 +189,7 @@ function Home() {
               </p>
               <div className="mt-6 flex items-baseline gap-3">
                 <span className="text-5xl font-black text-white">15,000₪</span>
-                <span className="text-muted-foreground">לקוהורט, לאחר סבסוד</span>
+                <span className="text-muted-foreground">לקבוצה של עד 20 משתתפים</span>
               </div>
             </div>
             <div className="bg-background/50 border border-white/10 rounded-2xl p-6 backdrop-blur">
