@@ -62,7 +62,7 @@ function Home() {
             </div>
             <h1 className="text-5xl md:text-7xl font-black leading-[0.95]">
               <span className="block text-white">Unboxing</span>
-              <span className="block text-primary">Challenge</span>
+              <span className="block text-accent">Challenge</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
               קוהורט הכשרה לפסג"ות, מועצות מקומיות ורשתות חינוך –
@@ -77,6 +77,12 @@ function Home() {
                 להרשמה ←
               </a>
               <a
+                href="/teachers"
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-bold px-6 py-3 rounded-full hover:opacity-90 transition"
+              >
+                אני מורה ומעוניין/ת
+              </a>
+              <a
                 href="mailto:rachel@mindcet.io?subject=בקשת מידע נוסף – Unboxing Challenge"
                 className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 rounded-full font-bold hover:bg-white/5 transition"
               >
@@ -89,7 +95,21 @@ function Home() {
               <Stat n="15,000₪" l="לאחר סבסוד" />
             </div>
           </div>
-          {/* Hero image removed */}
+          {/* Hero visual */}
+          <div className="hidden md:block relative">
+            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10">
+              <img src={img2.url} alt="מורים בהכשרה" className="absolute inset-0 w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[oklch(0.18_0.09_270)]/80 via-transparent to-transparent" />
+            </div>
+            <div
+              className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full -z-10 blur-2xl"
+              style={{ background: "var(--shape-purple)", opacity: 0.6 }}
+            />
+            <div
+              className="absolute -top-6 -left-6 w-28 h-28 rounded-full -z-10 blur-2xl"
+              style={{ background: "var(--primary)", opacity: 0.4 }}
+            />
+          </div>
         </div>
       </section>
 
