@@ -41,6 +41,13 @@ export default function SiteShell() {
               ההכשרה
             </Link>
             <Link
+              to="/teachers"
+              className="px-3 py-2 rounded-md hover:text-primary transition-colors"
+              activeProps={{ className: "text-primary" }}
+            >
+              למורים
+            </Link>
+            <Link
               to="/careers"
               className="px-3 py-2 rounded-md hover:text-primary transition-colors"
               activeProps={{ className: "text-primary" }}
