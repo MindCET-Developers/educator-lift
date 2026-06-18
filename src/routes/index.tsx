@@ -230,8 +230,9 @@ function Stat({ n, l }: { n: string; l: string }) {
 function SectionTitle({ eyebrow, title, align = "center" }: { eyebrow: string; title: string; align?: "center" | "start" }) {
   return (
     <div className={align === "center" ? "text-center" : ""}>
-      <div className="text-primary font-bold text-sm uppercase tracking-[0.2em]">{eyebrow}</div>
+      <div className="text-accent font-bold text-sm uppercase tracking-[0.2em]">{eyebrow}</div>
       <h2 className="text-3xl md:text-5xl mt-3">{title}</h2>
     </div>
+
   );
 }
