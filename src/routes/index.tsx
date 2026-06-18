@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
 import hero from "@/assets/פרסום_הכשרת_מורים_-_Cover_2.jpg.asset.json" with { type: "json" };
-import img1 from "@/assets/CM202357.JPG.asset.json" with { type: "json" };
+import img1 from "@/assets/teacher-presenting.jpg.asset.json" with { type: "json" };
 import img2 from "@/assets/teacher-helping-group.png.asset.json" with { type: "json" };
 import img3 from "@/assets/אתר3.JPG.asset.json" with { type: "json" };
 import img4 from "@/assets/IMG_3909.JPG.asset.json" with { type: "json" };
@@ -131,7 +131,7 @@ function Home() {
       {/* ABOUT WITH IMAGE */}
       <section className="relative max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <img src={img1.url} alt="מורות בסדנה" className="rounded-3xl w-full aspect-[4/5] object-cover border border-white/10" />
+          <img src={img1.url} alt="מורה מציגה בהכשרה" className="rounded-3xl w-full object-contain border border-white/10 bg-card" />
           <div>
             <SectionTitle eyebrow="מה זה Unboxing Challenge?" title="מפתחים פתרון אמיתי. בלי קוד." align="start" />
             <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
