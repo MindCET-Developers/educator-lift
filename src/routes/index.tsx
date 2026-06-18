@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
 import hero from "@/assets/פרסום_הכשרת_מורים_-_Cover_2.jpg.asset.json" with { type: "json" };
 import img1 from "@/assets/CM202357.JPG.asset.json" with { type: "json" };
-import img2 from "@/assets/אתר2.JPG.asset.json" with { type: "json" };
+import img2 from "@/assets/teacher-helping-group.png.asset.json" with { type: "json" };
 import img3 from "@/assets/אתר3.JPG.asset.json" with { type: "json" };
 import img4 from "@/assets/IMG_3909.JPG.asset.json" with { type: "json" };
 import img5 from "@/assets/אתר.JPG.asset.json" with { type: "json" };
