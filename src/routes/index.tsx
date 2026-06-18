@@ -42,10 +42,11 @@ const audiences = [
 ];
 
 const goals = [
-  { t: "פעלנות (Agency)", d: "פיתוח תחושת מסוגלות בקרב מורים בעידן ה-AI." },
-  { t: "אוריינות AI", d: "סקרנות ולמידה מתמשכת – להיות מודל לתלמידים." },
-  { t: "חשיבה עיצובית", d: "איתור כאבים פדגוגיים מהשטח וניסוחם כאתגרים פתירים." },
+  { t: "מסוגלות (Agency)", d: "פיתוח תחושת יכולת ומנהיגות בעידן ה-AI ועולם שמשתנה במהירות." },
+  { t: "אוריינות AI", d: "סקרנות ולמידה מתמשכת (LLL) – מודל לתלמידים בעידן משתנה." },
+  { t: "חשיבה עיצובית", d: "מתודולוגיית Design Thinking – זיהוי כאבים פדגוגיים מהשטח ופתרונם." },
 ];
+
 
 function Home() {
   return (
@@ -71,7 +72,7 @@ function Home() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="mailto:rachel@mindcet.io?subject=הרשמה לקוהורט Unboxing Challenge&body=שלום רחל,%0D%0Aאנחנו מעוניינים לפתוח קוהורט Unboxing Challenge.%0D%0Aשם הגוף:%0D%0Aאיש קשר:%0D%0Aטלפון:%0D%0Aמספר משתתפים משוער:"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold px-6 py-3 rounded-full hover:opacity-90 transition shadow-[0_10px_40px_-10px_oklch(0.7_0.14_45/0.6)]"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold px-6 py-3 rounded-full hover:opacity-90 transition shadow-[0_10px_40px_-10px_oklch(0.72_0.16_50/0.6)]"
               >
                 להרשמה ←
               </a>
@@ -229,8 +230,9 @@ function Stat({ n, l }: { n: string; l: string }) {
 function SectionTitle({ eyebrow, title, align = "center" }: { eyebrow: string; title: string; align?: "center" | "start" }) {
   return (
     <div className={align === "center" ? "text-center" : ""}>
-      <div className="text-primary font-bold text-sm uppercase tracking-[0.2em]">{eyebrow}</div>
+      <div className="text-accent font-bold text-sm uppercase tracking-[0.2em]">{eyebrow}</div>
       <h2 className="text-3xl md:text-5xl mt-3">{title}</h2>
     </div>
+
   );
 }

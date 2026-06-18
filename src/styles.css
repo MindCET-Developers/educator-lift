@@ -39,34 +39,35 @@
 
 :root {
   --radius: 0.75rem;
-  /* Soft dark charcoal / slate */
-  --background: oklch(0.22 0.012 260);
-  --foreground: oklch(0.96 0.005 250);
-  --card: oklch(0.26 0.014 260);
-  --card-foreground: oklch(0.96 0.005 250);
-  --popover: oklch(0.26 0.014 260);
-  --popover-foreground: oklch(0.96 0.005 250);
+  /* Deep navy/indigo – matches MindCET flyer */
+  --background: oklch(0.22 0.06 275);
+  --foreground: oklch(0.97 0.01 280);
+  --card: oklch(0.27 0.05 275);
+  --card-foreground: oklch(0.97 0.01 280);
+  --popover: oklch(0.27 0.05 275);
+  --popover-foreground: oklch(0.97 0.01 280);
   /* Warm orange accent – MindCET vibe */
-  --primary: oklch(0.7 0.14 45);
-  --primary-foreground: oklch(0.18 0.01 260);
-  --secondary: oklch(0.3 0.012 260);
-  --secondary-foreground: oklch(0.96 0.005 250);
-  --muted: oklch(0.3 0.012 260);
-  --muted-foreground: oklch(0.74 0.012 260);
-  --accent: oklch(0.7 0.14 45);
-  --accent-foreground: oklch(0.18 0.01 260);
+  --primary: oklch(0.72 0.16 50);
+  --primary-foreground: oklch(0.2 0.05 275);
+  --secondary: oklch(0.32 0.05 275);
+  --secondary-foreground: oklch(0.97 0.01 280);
+  --muted: oklch(0.32 0.05 275);
+  --muted-foreground: oklch(0.78 0.03 280);
+  --accent: oklch(0.78 0.09 295);
+  --accent-foreground: oklch(0.2 0.05 275);
   --destructive: oklch(0.6 0.15 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.34 0.012 260);
-  --input: oklch(0.3 0.012 260);
-  --ring: oklch(0.7 0.14 45);
+  --border: oklch(0.36 0.05 275);
+  --input: oklch(0.32 0.05 275);
+  --ring: oklch(0.72 0.16 50);
 
   /* Soft blob accent tints */
-  --shape-pink: oklch(0.7 0.08 20);
-  --shape-purple: oklch(0.5 0.08 285);
-  --shape-green: oklch(0.65 0.07 165);
-  --shape-yellow: oklch(0.78 0.08 80);
+  --shape-pink: oklch(0.72 0.09 20);
+  --shape-purple: oklch(0.55 0.12 290);
+  --shape-green: oklch(0.62 0.08 200);
+  --shape-yellow: oklch(0.78 0.1 80);
 }
+
 
 
 @layer base {
