@@ -77,7 +77,7 @@ export default function SiteShell() {
         <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-3">
             <div className="bg-white rounded-md px-2 py-1"><img src={logo.url} alt="MindCET" className="h-5" /></div>
-            <span>מבית מטח – המרכז לטכנולוגיה חינוכית</span>
+            <span>{"\n"}</span>
           </div>
           <div>
             יצירת קשר:{" "}
