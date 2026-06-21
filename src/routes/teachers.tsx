@@ -64,7 +64,7 @@ function Teachers() {
           <div className="absolute -bottom-20 right-0 w-60 h-60 rounded-full" style={{ background: "var(--accent)", filter: "blur(80px)", opacity: 0.3 }} />
           <div className="relative">
             <div className="text-accent font-bold uppercase tracking-wider text-sm">השאירו פרטים</div>
-            <h2 className="text-4xl md:text-5xl mt-3">בואו נדבר על הקוהורט הבא</h2>
+            <h2 className="text-4xl md:text-5xl mt-3">הצטרפו לקבוצה הבאה</h2>
             <p className="mt-5 text-lg text-muted-foreground max-w-2xl">
               שלחו לנו מייל קצר עם השם, בית הספר והפסג"ה שאליה אתם משתייכים – ונחזור אליכם בהקדם.
             </p>
