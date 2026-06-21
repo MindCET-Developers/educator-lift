@@ -1,5 +1,5 @@
 import { Link, Outlet } from "@tanstack/react-router";
-import logo from "@/assets/Mindcet-logo.png.asset.json";
+import logo from "@/assets/mindcet-logo.png";
 
 export function BackgroundShapes() {
   return (
@@ -28,7 +28,7 @@ export default function SiteShell() {
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-3">
             <div className="bg-white rounded-lg px-3 py-2">
-              <img src={logo.url} alt="MindCET" className="h-7 w-auto" />
+              <img src={logo} alt="MindCET" className="h-7 w-auto" />
             </div>
           </Link>
           <nav className="flex items-center gap-2 md:gap-6 text-sm md:text-base font-semibold">
@@ -76,7 +76,7 @@ export default function SiteShell() {
       <footer className="border-t border-border/60 bg-background/60 mt-20">
         <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-3">
-            <div className="bg-white rounded-md px-2 py-1"><img src={logo.url} alt="MindCET" className="h-5" /></div>
+            <div className="bg-white rounded-md px-2 py-1"><img src={logo} alt="MindCET" className="h-5" /></div>
             <span>{"\n"}</span>
           </div>
           <div>

@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
-import hero from "@/assets/פרסום_הכשרת_מורים_-_Cover_2.jpg.asset.json" with { type: "json" };
-import img1 from "@/assets/teacher-presenting.jpg.asset.json" with { type: "json" };
-import img2 from "@/assets/teacher-helping-group.png.asset.json" with { type: "json" };
-import img3 from "@/assets/אתר3.JPG.asset.json" with { type: "json" };
-import img4 from "@/assets/IMG_3909.JPG.asset.json" with { type: "json" };
-import img5 from "@/assets/אתר.JPG.asset.json" with { type: "json" };
-import img6 from "@/assets/CM203978.JPG.asset.json" with { type: "json" };
+import hero from "@/assets/social-cover.jpg";
+import img1 from "@/assets/teacher-presenting.jpg";
+import img2 from "@/assets/teacher-helping-group.png";
+import img3 from "@/assets/training-2.jpg";
+import img4 from "@/assets/training-1.jpg";
+import img5 from "@/assets/training-3.jpg";
+import img6 from "@/assets/training-4.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,8 +15,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "10 מפגשים בהם מורים מפתחים פתרון AI לאתגר פדגוגי מקומי. תכנית הכשרה של MindCET לפסג\"ות, מועצות מקומיות ורשתות חינוך." },
       { property: "og:title", content: "Unboxing Challenge | MindCET" },
       { property: "og:description", content: "הכשרה לפיתוח פתרונות AI לאתגרים פדגוגיים – לפסג\"ות, מועצות ורשתות חינוך." },
-      { property: "og:image", content: hero.url },
-      { name: "twitter:image", content: hero.url },
+      { property: "og:image", content: hero },
+      { name: "twitter:image", content: hero },
     ],
   }),
   component: Home,
@@ -98,7 +98,7 @@ function Home() {
           {/* Hero visual */}
           <div className="hidden md:block relative">
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10">
-              <img src={img2.url} alt="מורים בהכשרה" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={img2} alt="מורים בהכשרה" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-tr from-[oklch(0.18_0.09_270)]/80 via-transparent to-transparent" />
             </div>
             <div
@@ -131,7 +131,7 @@ function Home() {
       {/* ABOUT WITH IMAGE */}
       <section className="relative max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <img src={img1.url} alt="מורה מציגה בהכשרה" className="rounded-3xl w-full object-contain border border-white/10 bg-card" />
+          <img src={img1} alt="מורה מציגה בהכשרה" className="rounded-3xl w-full object-contain border border-white/10 bg-card" />
           <div>
             <SectionTitle eyebrow="מה זה Unboxing Challenge?" title="מפתחים פתרון אמיתי. בלי קוד." align="start" />
             <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
@@ -171,7 +171,7 @@ function Home() {
       <section className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {[img4, img3, img5, img6].map((im, i) => (
-            <img key={i} src={im.url} alt="מורים בהכשרה" className="rounded-2xl w-full aspect-square object-cover border border-white/10" />
+            <img key={i} src={im} alt="מורים בהכשרה" className="rounded-2xl w-full aspect-square object-cover border border-white/10" />
           ))}
         </div>
       </section>

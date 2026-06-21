@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
-import img from "@/assets/CM202357.JPG.asset.json" with { type: "json" };
+import img from "@/assets/teachers-workshop.jpg";
 
 export const Route = createFileRoute("/teachers")({
   head: () => ({
@@ -9,7 +9,7 @@ export const Route = createFileRoute("/teachers")({
       { name: "description", content: "מורות ומורים שמעוניינים להשתתף ב-Unboxing Challenge – השאירו פרטים ונחבר אתכם לקוהורט הקרוב באזורכם." },
       { property: "og:title", content: "מורים מעוניינים – Unboxing Challenge | MindCET" },
       { property: "og:description", content: "מעוניינים להשתתף בהכשרה? השאירו פרטים." },
-      { property: "og:image", content: img.url },
+      { property: "og:image", content: img },
     ],
   }),
   component: Teachers,
@@ -43,7 +43,7 @@ function Teachers() {
 
       <section className="max-w-5xl mx-auto px-6 py-10">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <img src={img.url} alt="מורים בסדנה" className="rounded-3xl w-full aspect-[4/5] object-cover border border-white/10" />
+          <img src={img} alt="מורים בסדנה" className="rounded-3xl w-full aspect-[4/5] object-cover border border-white/10" />
           <div>
             <h2 className="text-3xl md:text-4xl">מה תקבלו</h2>
             <ul className="mt-6 space-y-4">

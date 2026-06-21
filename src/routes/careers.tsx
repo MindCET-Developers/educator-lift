@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
-import img from "@/assets/אתר2.JPG.asset.json" with { type: "json" };
+import img from "@/assets/careers.jpg";
 
 export const Route = createFileRoute("/careers")({
   head: () => ({
@@ -9,7 +9,7 @@ export const Route = createFileRoute("/careers")({
       { name: "description", content: "MindCET מגייסת מנחים מובילים להדרכת צוותי חינוך ברחבי הארץ, בדגש על אזור הנגב. הגישו מועמדות עכשיו." },
       { property: "og:title", content: "דרושים – מנחים מובילים | MindCET" },
       { property: "og:description", content: "MindCET מגייסת מנחים מובילים להדרכת צוותי חינוך ברחבי הארץ." },
-      { property: "og:image", content: img.url },
+      { property: "og:image", content: img },
     ],
   }),
   component: Careers,
@@ -73,7 +73,7 @@ function Careers() {
 
       <section className="max-w-5xl mx-auto px-6 py-10">
         <div className="grid md:grid-cols-[1fr_1.3fr] gap-8 items-center">
-          <img src={img.url} alt="מנחה מיינדסט" className="rounded-3xl w-full aspect-[4/5] object-cover border border-white/10" />
+          <img src={img} alt="מנחה מיינדסט" className="rounded-3xl w-full aspect-[4/5] object-cover border border-white/10" />
           <div>
             <h2 className="text-3xl md:text-4xl">למה MindCET?</h2>
             <p className="mt-5 text-muted-foreground leading-relaxed text-lg">
