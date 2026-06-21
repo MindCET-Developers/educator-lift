@@ -36,9 +36,8 @@ function Teachers() {
           <span className="block text-accent">להשתתף בהכשרה?</span>
         </h1>
         <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-          ה-Unboxing Challenge נפתח בקוהורטים דרך מרכזי פסג"ה, מועצות מקומיות ורשתות חינוך.
-          אם אתם רוצים להשתתף – השאירו פרטים ונעדכן אתכם כשנפתח קוהורט באזורכם,
-          או נעזור לכם להניע פתיחת קבוצה בפסג"ה שלכם.
+          הכשרת Unboxing Challenge נפתחת דרך מרכזי פסג"ה, מועצות מקומיות ורשתות חינוך.
+          אם אתם רוצים להשתתף – השאירו פרטים ונעדכן אתכם כשנפתחת קבוצה באזורכם.
         </p>
       </section>
 
