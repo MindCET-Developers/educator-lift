@@ -1,5 +1,5 @@
 import { Link, Outlet } from "@tanstack/react-router";
-import logo from "@/assets/Mindcet-logo.png.asset.json";
+import logo from "@/assets/Mindcet-logo_white.png.asset.json";
 
 export function BackgroundShapes() {
   return (
