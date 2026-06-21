@@ -23,9 +23,9 @@ export const Route = createFileRoute("/")({
 });
 
 const sessions = [
-  { n: 1, title: "מהו אתר Unboxing? היכרות עם עולם ה-AI" },
-  { n: 2, title: "סדנת כאבים – פדגוגים, ועקרונות Design Thinking" },
-  { n: 3, title: "לחשוב כמו סטרטאפ: ראיונות וקנבס פתרון" },
+  { n: 1, title: "מהו אתגר Unboxing? היכרות עם עולם ה-AI" },
+  { n: 2, title: "סדנת כאבים פדגוגים, ועקרונות Design Thinking" },
+  { n: 3, title: "לחשוב כמו סטרטאפ: רעיונאות וקנבס פתרון" },
   { n: 4, title: "מהו MVP ואיך יוצרים מסמך הנחות" },
   { n: 5, title: "יצירת אפליקציה באמצעות AI" },
   { n: 6, title: "תכנון טסט: איך נשתמש באפליקציה בכיתה?" },
