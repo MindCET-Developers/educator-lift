@@ -91,27 +91,17 @@ function AshkelonCoast() {
               מלאו את הטופס ונחזור אליכם עם כל הפרטים על מועדי המפגשים, המיקומים והחומרים המקדימים.
             </p>
 
-            <div className="mt-8 rounded-2xl overflow-hidden bg-white border border-white/10 shadow-2xl">
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSc-placeholder/viewform?embedded=true"
-                title="טופס הרשמה – חוף אשקלון"
-                className="w-full"
-                style={{ height: "1100px", border: 0 }}
-                loading="lazy"
-                onError={(e) => { (e.currentTarget as HTMLIFrameElement).style.display = "none"; }}
-              >
-                טוען טופס…
-              </iframe>
-            </div>
-
             <a
               href={FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 bg-accent text-accent-foreground font-bold px-6 py-3 rounded-full hover:opacity-90 transition"
+              className="mt-8 inline-flex items-center gap-2 bg-accent text-accent-foreground font-bold px-7 py-4 rounded-full hover:opacity-90 transition shadow-[0_10px_40px_-10px_oklch(0.78_0.09_295/0.6)] text-lg"
             >
-              פתיחת הטופס בחלון חדש ←
+              מילוי טופס ההרשמה ←
             </a>
+            <div className="mt-4 text-sm text-muted-foreground break-all">
+              קישור ישיר: <a className="text-accent hover:underline" href={FORM_URL} target="_blank" rel="noopener noreferrer">{FORM_URL}</a>
+            </div>
           </div>
         </div>
       </section>

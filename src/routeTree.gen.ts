@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TeachersRouteImport } from './routes/teachers'
 import { Route as CareersRouteImport } from './routes/careers'
+import { Route as AshkelonCoastRouteImport } from './routes/ashkelon-coast'
 import { Route as AppsRouteImport } from './routes/apps'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -22,6 +23,11 @@ const TeachersRoute = TeachersRouteImport.update({
 const CareersRoute = CareersRouteImport.update({
   id: '/careers',
   path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AshkelonCoastRoute = AshkelonCoastRouteImport.update({
+  id: '/ashkelon-coast',
+  path: '/ashkelon-coast',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppsRoute = AppsRouteImport.update({
@@ -38,12 +44,14 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/apps': typeof AppsRoute
+  '/ashkelon-coast': typeof AshkelonCoastRoute
   '/careers': typeof CareersRoute
   '/teachers': typeof TeachersRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/apps': typeof AppsRoute
+  '/ashkelon-coast': typeof AshkelonCoastRoute
   '/careers': typeof CareersRoute
   '/teachers': typeof TeachersRoute
 }
@@ -51,20 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/apps': typeof AppsRoute
+  '/ashkelon-coast': typeof AshkelonCoastRoute
   '/careers': typeof CareersRoute
   '/teachers': typeof TeachersRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/apps' | '/careers' | '/teachers'
+  fullPaths: '/' | '/apps' | '/ashkelon-coast' | '/careers' | '/teachers'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/apps' | '/careers' | '/teachers'
-  id: '__root__' | '/' | '/apps' | '/careers' | '/teachers'
+  to: '/' | '/apps' | '/ashkelon-coast' | '/careers' | '/teachers'
+  id: '__root__' | '/' | '/apps' | '/ashkelon-coast' | '/careers' | '/teachers'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppsRoute: typeof AppsRoute
+  AshkelonCoastRoute: typeof AshkelonCoastRoute
   CareersRoute: typeof CareersRoute
   TeachersRoute: typeof TeachersRoute
 }
@@ -83,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/careers'
       fullPath: '/careers'
       preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ashkelon-coast': {
+      id: '/ashkelon-coast'
+      path: '/ashkelon-coast'
+      fullPath: '/ashkelon-coast'
+      preLoaderRoute: typeof AshkelonCoastRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/apps': {
@@ -105,6 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppsRoute: AppsRoute,
+  AshkelonCoastRoute: AshkelonCoastRoute,
   CareersRoute: CareersRoute,
   TeachersRoute: TeachersRoute,
 }
