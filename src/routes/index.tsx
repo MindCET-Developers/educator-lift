@@ -92,7 +92,6 @@ function Home() {
             <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm">
               <Stat n="10" l="מפגשים" />
               <Stat n="30" l="שעות השתלמות" />
-              <Stat n="15,000₪" l="לאחר סבסוד" />
             </div>
           </div>
           {/* Hero visual */}
@@ -208,8 +207,7 @@ function Home() {
                 מנחים, חומרים, פלטפורמה וקהילה.
               </p>
               <div className="mt-6 flex items-baseline gap-3">
-                <span className="text-5xl font-black text-white">15,000₪</span>
-                <span className="text-muted-foreground">לקבוצה של עד 20 משתתפים</span>
+                <span className="text-muted-foreground">עד 20 משתתפים בקבוצה</span>
               </div>
             </div>
             <div className="bg-background/50 border border-white/10 rounded-2xl p-6 backdrop-blur">
