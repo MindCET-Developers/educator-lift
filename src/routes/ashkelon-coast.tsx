@@ -18,9 +18,9 @@ export const Route = createFileRoute("/ashkelon-coast")({
 });
 
 const highlights = [
-  { t: "ימי רביעי", d: "16:00 – 18:30, לאורך כל ההכשרה." },
+  { t: "ימי רביעי", d: "16:00 – 18:30" },
   { t: "מקוון + פרונטלי", d: "חלק מהמפגשים בזום, חלק במחלקת החינוך של מועצת חוף אשקלון." },
-  { t: "Demo Day במיינדסט", d: "מפגש הסיום וההצגה של האפליקציות שלכם יתקיים במשרדי מיינדסט." },
+  { t: "Demo Day במיינדסט", d: "מפגש הסיום וההצגה של האפליקציות שלכם יתקיים במתחם החדשנות של MindCET בירוחם." },
   { t: "ללא ידע קודם בתכנות", d: "בונים אפליקציית AI אמיתית לאתגר פדגוגי שלכם – שלב אחר שלב." },
 ];
 
@@ -48,7 +48,7 @@ function AshkelonCoast() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-bold px-6 py-3 rounded-full hover:opacity-90 transition shadow-[0_10px_40px_-10px_oklch(0.78_0.09_295/0.6)]"
           >
-            הרשמה לקוהורט ←
+            הרשמה ←
           </a>
           <a
             href="#details"
@@ -100,7 +100,7 @@ function AshkelonCoast() {
               מילוי טופס ההרשמה ←
             </a>
             <div className="mt-4 text-sm text-muted-foreground break-all">
-              קישור ישיר: <a className="text-accent hover:underline" href={FORM_URL} target="_blank" rel="noopener noreferrer">{FORM_URL}</a>
+              {"\n"}
             </div>
           </div>
         </div>
