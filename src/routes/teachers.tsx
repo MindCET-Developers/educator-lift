@@ -39,6 +39,19 @@ function Teachers() {
           הכשרת Unboxing Challenge נפתחת דרך מרכזי פסג"ה, מועצות מקומיות ורשתות חינוך.
           אם אתם רוצים להשתתף – השאירו פרטים ונעדכן אתכם כשנפתחת קבוצה באזורכם.
         </p>
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <span className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 text-accent rounded-full px-4 py-1.5 text-sm font-bold">
+            ✦ 30 ש"ש לגמול השתלמות
+          </span>
+          <a
+            href="https://edu.gov.il/owlheb/yesodi/minhal-pedagogi/pituah-mikzoii/Pages/gemul-hishtalmut.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-accent hover:underline font-bold text-sm"
+          >
+            למידע נוסף על גמול השתלמות ←
+          </a>
+        </div>
       </section>
 
       <section className="max-w-5xl mx-auto px-6 py-10">
