@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
 import photo from "@/assets/ashkelon-teachers.jpg.asset.json";
 
@@ -21,6 +21,7 @@ const highlights = [
   { t: "ההכשרה תתקיים בימי רביעי", d: "בשעות 16:00 – 18:30" },
   { t: "מתכונת היברידית", d: "חלק מהמפגשים בזום, חלק במחלקת החינוך של מועצת חוף אשקלון ובמתחם החדשנות של MindCET בירוחם." },
   { t: "Demo Day במיינדסט", d: "מפגש הסיום וההצגה של האפליקציות שלכם יתקיים במתחם החדשנות של MindCET בירוחם." },
+  { t: "30 ש\"ש גמול השתלמות", d: "ההכשרה מזכה ב-30 שעות שנתיות של גמול השתלמות." },
   { t: "ללא ידע קודם בתכנות", d: "בונים אפליקציית AI אמיתית לאתגר פדגוגי שלכם – שלב אחר שלב." },
 ];
 
@@ -39,7 +40,10 @@ function AshkelonCoast() {
         </h1>
         <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
           הכשרה ייעודית למורות ומורים במועצה האזורית חוף אשקלון – פיתוח אפליקציית AI לאתגר הפדגוגי שלכם,
-          בליווי צמוד של צוות מיינדסט ומחלקת החינוך.
+          בליווי צמוד של צוות מיינדסט ומחלקת החינוך. ההכשרה מזכה ב-30 ש"ש גמול השתלמות.{" "}
+          <Link to="/teachers" className="text-accent hover:underline font-semibold">
+            למידע נוסף על התכנית למורים ←
+          </Link>
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
