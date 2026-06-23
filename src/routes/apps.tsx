@@ -28,6 +28,8 @@ type App = {
   desc: string;
   school?: string;
   url: string;
+  image?: string;
+  gradient?: string;
 };
 
 type Cohort = {
@@ -36,71 +38,77 @@ type Cohort = {
   apps: App[];
 };
 
+// Thematic gradient palettes used when a project has no hero image
+const GRADIENTS = [
+  "linear-gradient(135deg, oklch(0.55 0.18 295), oklch(0.45 0.15 260))",
+  "linear-gradient(135deg, oklch(0.6 0.16 25), oklch(0.45 0.18 350))",
+  "linear-gradient(135deg, oklch(0.55 0.15 200), oklch(0.4 0.14 270))",
+  "linear-gradient(135deg, oklch(0.6 0.17 145), oklch(0.45 0.15 200))",
+  "linear-gradient(135deg, oklch(0.65 0.16 60), oklch(0.5 0.18 25))",
+  "linear-gradient(135deg, oklch(0.55 0.18 320), oklch(0.4 0.15 280))",
+];
+const g = (i: number) => GRADIENTS[i % GRADIENTS.length];
+
 const cohorts: Cohort[] = [
   {
     name: "תכנית ברנקו וייס – מישרים",
     subtitle: "8 פרויקטים",
     apps: [
-      { n: "01", authors: "נטליה מקובצקי וימית כהן", title: "צ׳אק אין מה בשליטתי", desc: "כלי צ׳אק־אין יומי שעוזר למורות ולתלמידים לזהות מה בשליטתם ומה לא — ולפתוח את היום ממקום של בחירה.", school: "דרור, חיפה", url: "https://wandering-mentor-path-pro.base44.app/" },
-      { n: "02", authors: "רבקה ביטון", title: "אלי-קשר", desc: "מערכת קשר חכמה למורי בית הספר, שמרכזת תורנויות, משימות ועדכונים במקום אחד.", school: "אלי כהן, קריית מלאכי", url: "https://magic-patrol-duty-now.base44.app/" },
-      { n: "03", authors: "לימור עזרן ואושרית בן חמו", title: "מחשבתון", desc: "פלטפורמת משחק־מחשבה שמחברת בין למידה משמעותית להנאה אמיתית.", school: "אפרים בן דוד", url: "https://mishbavton-learn-play.base44.app/" },
-      { n: "04", authors: "חדוה נדב ולי סול", title: "Differentio", desc: "כלי הוראה מותאם אישית שמייצר חומרים דיפרנציאליים לפי רמות בכיתה.", school: "אחוות אחים, קרית מלאכי", url: "https://differ-lesson-now.base44.app/" },
-      { n: "05", authors: "כרם ומוחמד אבו מדיגם", title: "TeachToc", desc: "אפליקציית שיעור־בתנועה, שמרכזת את כל הפעילות הכיתתית במסך אחד למורה.", school: "אלרסאלה, רהט", url: "https://teach-lesson-go.base44.app/" },
-      { n: "06", authors: "אושרית עטון ורינת מדינה", title: "קוראים בהנאה", desc: "מרחב קריאה עצמאי שמלווה תלמידים צעירים עם משחקים, אתגרים ותחושת הצלחה.", school: "מצפה, באר שבע", url: "https://read-joy-flow.base44.app/" },
-      { n: "07", authors: "דורין רז ועדי שושן", title: "הרדאר החברתי", desc: "רדאר חברתי לכיתה — כלי שמסייע למחנכות לזהות דינמיקות חברתיות בזמן אמת.", school: "אמירים, קרית ים", url: "https://script.google.com/macros/s/AKfycbyhbh7EPHn5IMHFH8zTBxO98HigXRufHHrUnM5GYLBxTki1jAXxkhJMAgNm8LSkXx1j/exec" },
-      { n: "08", authors: "מרג׳י טל ושירה פישמן-עופרי", title: "מצפן ברון", desc: "מצפן אישי לבחירת כיוון לימודי, שמלווה תלמידי תיכון בקבלת החלטות.", school: "תלמי רון, חריש", url: "https://baron-compass-guide.base44.app/" },
+      { n: "01", authors: "נטליה מקובצקי וימית כהן", title: "צ׳אק אין מה בשליטתי", desc: "כלי צ׳אק־אין יומי שעוזר למורות ולתלמידים לזהות מה בשליטתם ומה לא — ולפתוח את היום ממקום של בחירה.", school: "דרור, חיפה", url: "https://wandering-mentor-path-pro.base44.app/", gradient: g(0) },
+      { n: "02", authors: "רבקה ביטון", title: "אלי-קשר", desc: "מערכת קשר חכמה למורי בית הספר, שמרכזת תורנויות, משימות ועדכונים במקום אחד.", school: "אלי כהן, קריית מלאכי", url: "https://magic-patrol-duty-now.base44.app/", gradient: g(1) },
+      { n: "03", authors: "לימור עזרן ואושרית בן חמו", title: "מחשבתון", desc: "פלטפורמת משחק־מחשבה שמחברת בין למידה משמעותית להנאה אמיתית.", school: "אפרים בן דוד", url: "https://mishbavton-learn-play.base44.app/", gradient: g(2) },
+      { n: "04", authors: "חדוה נדב ולי סול", title: "Differentio", desc: "כלי הוראה מותאם אישית שמייצר חומרים דיפרנציאליים לפי רמות בכיתה.", school: "אחוות אחים, קרית מלאכי", url: "https://differ-lesson-now.base44.app/", gradient: g(3) },
+      { n: "05", authors: "כרם ומוחמד אבו מדיגם", title: "TeachToc", desc: "אפליקציית שיעור־בתנועה, שמרכזת את כל הפעילות הכיתתית במסך אחד למורה.", school: "אלרסאלה, רהט", url: "https://teach-lesson-go.base44.app/", gradient: g(4) },
+      { n: "06", authors: "אושרית עטון ורינת מדינה", title: "קוראים בהנאה", desc: "מרחב קריאה עצמאי שמלווה תלמידים צעירים עם משחקים, אתגרים ותחושת הצלחה.", school: "מצפה, באר שבע", url: "https://read-joy-flow.base44.app/", gradient: g(5) },
+      { n: "07", authors: "דורין רז ועדי שושן", title: "הרדאר החברתי", desc: "רדאר חברתי לכיתה — כלי שמסייע למחנכות לזהות דינמיקות חברתיות בזמן אמת.", school: "אמירים, קרית ים", url: "https://script.google.com/macros/s/AKfycbyhbh7EPHn5IMHFH8zTBxO98HigXRufHHrUnM5GYLBxTki1jAXxkhJMAgNm8LSkXx1j/exec", gradient: g(0) },
+      { n: "08", authors: "מרג׳י טל ושירה פישמן-עופרי", title: "מצפן ברון", desc: "מצפן אישי לבחירת כיוון לימודי, שמלווה תלמידי תיכון בקבלת החלטות.", school: "תלמי רון, חריש", url: "https://baron-compass-guide.base44.app/", gradient: g(1) },
     ],
   },
   {
     name: "ירוחם ורחמ'ה",
     subtitle: "7 פרויקטים",
     apps: [
-      { n: "09", authors: "סלימאן סלאח", title: "Smart School Bag", desc: "ארגון חכם של תיק בית הספר — תזכורות, מערכת ופריטים שלא נשכחים יותר.", school: "רחמ'ה", url: "https://smart-school-bag.base44.app/" },
-      { n: "10", authors: "עדי וזהורית", title: "עברית בזרימה", desc: "כלי אינטראקטיבי ללימוד עברית לילדים בכיתות הנמוכות, בקצב שלהם.", school: "מאוחד, ירוחם", url: "https://ivrit-flow-kids.base44.app/" },
-      { n: "11", authors: "סיהאם ונדא", title: "Daily Pulse — נג׳ום", desc: "פלטפורמת נג׳ום למעקב יומי אחר תלמידים, רגשות ולמידה.", school: "רחמ'ה", url: "https://brawny-my-daily-pulse.base44.app/" },
-      { n: "12", authors: "פנינה", title: "Joy Class Vibe", desc: "אקלים כיתה מסוג חדש — מדידה, משחק וחיזוקים שמייצרים אווירה טובה.", school: "שחר, ירוחם", url: "https://joy-class-vibe.base44.app/" },
-      { n: "13", authors: "זאהר", title: "תקציב גפן", desc: "מערכת לניהול תקציב כיתתי ובית־ספרי, שקופה ופשוטה לכל הצוות.", school: "רחמ'ה", url: "https://gafan-budget-flow.base44.app/" },
-      { n: "14", authors: "בת אל ומאי", title: "Smart School Sync", desc: "סנכרון חכם בין מערכת בית הספר, מורים ותלמידים — בלי בלאגן.", school: "מאוחד, ירוחם", url: "https://mutant-smart-school-sync.base44.app/" },
-      { n: "15", authors: "טטיאנה ואתי", title: "קישורינו — Connect Hub", desc: "מרכז קישור בין מורים, הורים ותלמידים — תקשורת אחת, ממוקדת.", school: "מאוחד, ירוחם", url: "https://kishreenu-connect-hub.base44.app/" },
+      { n: "09", authors: "סלימאן סלאח", title: "Smart School Bag", desc: "ארגון חכם של תיק בית הספר — תזכורות, מערכת ופריטים שלא נשכחים יותר.", school: "רחמ'ה", url: "https://smart-school-bag.base44.app/", gradient: g(2) },
+      { n: "10", authors: "עדי וזהורית", title: "עברית בזרימה", desc: "כלי אינטראקטיבי ללימוד עברית לילדים בכיתות הנמוכות, בקצב שלהם.", school: "מאוחד, ירוחם", url: "https://ivrit-flow-kids.base44.app/", gradient: g(3) },
+      { n: "11", authors: "סיהאם ונדא", title: "Daily Pulse — נג׳ום", desc: "פלטפורמת נג׳ום למעקב יומי אחר תלמידים, רגשות ולמידה.", school: "רחמ'ה", url: "https://brawny-my-daily-pulse.base44.app/", gradient: g(4) },
+      { n: "12", authors: "פנינה", title: "Joy Class Vibe", desc: "אקלים כיתה מסוג חדש — מדידה, משחק וחיזוקים שמייצרים אווירה טובה.", school: "שחר, ירוחם", url: "https://joy-class-vibe.base44.app/", gradient: g(5) },
+      { n: "13", authors: "זאהר", title: "תקציב גפן", desc: "מערכת לניהול תקציב כיתתי ובית־ספרי, שקופה ופשוטה לכל הצוות.", school: "רחמ'ה", url: "https://gafan-budget-flow.base44.app/", gradient: g(0) },
+      { n: "14", authors: "בת אל ומאי", title: "Smart School Sync", desc: "סנכרון חכם בין מערכת בית הספר, מורים ותלמידים — בלי בלאגן.", school: "מאוחד, ירוחם", url: "https://mutant-smart-school-sync.base44.app/", gradient: g(1) },
+      { n: "15", authors: "טטיאנה ואתי", title: "קישורינו — Connect Hub", desc: "מרכז קישור בין מורים, הורים ותלמידים — תקשורת אחת, ממוקדת.", school: "מאוחד, ירוחם", url: "https://kishreenu-connect-hub.base44.app/", gradient: g(2) },
     ],
   },
   {
     name: "דימונה",
-    subtitle: "8 פרויקטים",
+    subtitle: "10 פרויקטים",
     apps: [
-      { n: "16", authors: "אייל", title: "דימונעים", desc: "דימונעים — מידע מטאורולוגי מותאם לדימונה ולתלמידיה.", url: "https://project-pulse-copy-753a595d.base44.app/" },
-      { n: "17", authors: "טטיאנה ובת אל", title: "SkillShare", desc: "פלטפורמת קורסים שיתופיים שמופעלת על ידי תלמידים בשביל תלמידים.", url: "https://skill-share-connect-eb9db17e.base44.app/" },
-      { n: "18", authors: "תהילה", title: "דיווח נוכחות ומילויי מקום", desc: "ניהול נוכחות ושיבוץ מילויי מקום — בלי שיחות בהפסקה.", url: "https://substitute-teacher-manager-copy-2d9e02d4.base44.app/" },
-      { n: "19", authors: "יאנה אילייסוב", title: "Plan Smart", desc: "בניית תוכנית ומערכי שיעור מותאמי רמות בלחיצת כפתור.", url: "https://plan-click-teach.base44.app/" },
-      { n: "20", authors: "עליזה", title: "אלופי האיות", desc: "תרגול ממוקד של שגיאות כתיב, מותאם אישית לכל לומדת.", url: "https://spell-master-9033aeed.base44.app/" },
-      { n: "21", authors: "תמי", title: "עובדים בקליק", desc: "מיומנויות תעסוקה לחינוך מיוחד — בקליק, בקצב של התלמיד.", url: "https://app-6b4175e1.base44.app/" },
-      { n: "22", authors: "שוהם", title: "מדריך חקלאי דיגיטלי", desc: "מדריך חקלאי דיגיטלי לבתי ספר חקלאיים — צמחים, חוות וגידולים.", url: "https://preview--digi-sadeh-guide.lovable.app/" },
-      { n: "23", authors: "נילי וטופז", title: "VoicePlanner", desc: "תמלול ותיעוד פגישות לצוות החינוכי — כדי שלא יישכח שום דבר חשוב.", url: "https://voiceplanner.replit.app/" },
-    ],
-  },
-  {
-    name: "מתחילים",
-    subtitle: "2 פרויקטים",
-    apps: [
-      { n: "24", authors: "אירינה סיזיקוב", title: "תזכורת הבאת ציוד", desc: "תזכורות חכמות להבאת ציוד — תלמידים מגיעים מוכנים, מורים נושמים.", url: "https://app-3bd223ea.base44.app/" },
-      { n: "25", authors: "מעין שם טוב", title: "Breath", desc: "כלי טיפולי קצר לוויסות נשימה — לשיפור אקלים ולמידה בכיתה.", url: "https://breathe-buddy-calm.base44.app/" },
+      { n: "16", authors: "אייל", title: "דימונעים", desc: "דימונעים — מידע מטאורולוגי מותאם לדימונה ולתלמידיה.", url: "https://project-pulse-copy-753a595d.base44.app/", gradient: g(3) },
+      { n: "17", authors: "טטיאנה ובת אל", title: "SkillShare", desc: "פלטפורמת קורסים שיתופיים שמופעלת על ידי תלמידים בשביל תלמידים.", url: "https://skill-share-connect-eb9db17e.base44.app/", gradient: g(4) },
+      { n: "18", authors: "תהילה", title: "דיווח נוכחות ומילויי מקום", desc: "ניהול נוכחות ושיבוץ מילויי מקום — בלי שיחות בהפסקה.", url: "https://substitute-teacher-manager-copy-2d9e02d4.base44.app/", gradient: g(5) },
+      { n: "19", authors: "יאנה אילייסוב", title: "Plan Smart", desc: "בניית תוכנית ומערכי שיעור מותאמי רמות בלחיצת כפתור.", url: "https://plan-click-teach.base44.app/", gradient: g(0) },
+      { n: "20", authors: "עליזה", title: "אלופי האיות", desc: "תרגול ממוקד של שגיאות כתיב, מותאם אישית לכל לומדת.", url: "https://spell-master-9033aeed.base44.app/", gradient: g(1) },
+      { n: "21", authors: "תמי", title: "עובדים בקליק", desc: "מיומנויות תעסוקה לחינוך מיוחד — בקליק, בקצב של התלמיד.", url: "https://app-6b4175e1.base44.app/", gradient: g(2) },
+      { n: "22", authors: "שוהם", title: "מדריך חקלאי דיגיטלי", desc: "מדריך חקלאי דיגיטלי לבתי ספר חקלאיים — צמחים, חוות וגידולים.", url: "https://preview--digi-sadeh-guide.lovable.app/", gradient: g(3) },
+      { n: "23", authors: "נילי וטופז", title: "VoicePlanner", desc: "תמלול ותיעוד פגישות לצוות החינוכי — כדי שלא יישכח שום דבר חשוב.", url: "https://voiceplanner.replit.app/", gradient: g(4) },
+      { n: "24", authors: "אירינה סיזיקוב", title: "תזכורת הבאת ציוד", desc: "תזכורות חכמות להבאת ציוד — תלמידים מגיעים מוכנים, מורים נושמים.", url: "https://app-3bd223ea.base44.app/", gradient: g(5) },
+      { n: "25", authors: "מעין שם טוב", title: "Breath", desc: "כלי טיפולי קצר לוויסות נשימה — לשיפור אקלים ולמידה בכיתה.", url: "https://breathe-buddy-calm.base44.app/", gradient: g(0) },
     ],
   },
   {
     name: "Demo Day · ירוחם ורמת נגב",
     subtitle: "8 פרויקטים",
     apps: [
-      { n: "01", authors: "גפן וג'וזפין", title: "חדר מורים שמחבק", desc: "חיפשו דרך לחזק את תחושת השייכות של המורים בחדר המורים — בעולם שבו תרבות ההערכה למורים לא תמיד קיימת.", url: "https://school-pulse-care.base44.app/" },
-      { n: "02", authors: "יעל", title: "בגרות בעיצוב — כמשחק", desc: "משחק שנועד להפוך את החלק היבש והתיאורטי של הבגרות בעיצוב לחוויה מהנה יותר.", url: "https://design-odyssey-play.base44.app/" },
-      { n: "03", authors: "מיכאל", title: "מרכז ההתאמות", desc: "יוצר אפליקציות סדרתי, שהפעם עיצב מערכת שלמה לריכוז כל נושא ההתאמות בבית הספר — ואולי בקרוב בכל המועצה.", url: "https://exam-adjust-pro.base44.app/" },
-      { n: "04", authors: "הילה", title: "התקציב של המורה", desc: "המנהלנית המסורה של בי\"ס צין באה ללמוד ופיתחה מערכת שמאפשרת למורים לראות ולנהל את התקציב שלהם. העצמת מורים, כבר אמרנו?", url: "https://teacher-budget-buddy.base44.app/" },
-      { n: "05", authors: "שרון", title: "יועץ אקלים כיתתי", desc: "אפליקציה שנותנת עצות לניהול הכיתה ומענה לבעיות אקלים כיתתי — לפי השכבה והבעיה הספציפית שעולה.", url: "https://sos-lamore.netlify.app/" },
-      { n: "06", authors: "גבריאל", title: "ויסות בזמן אמת", desc: "מורה לחינוך מיוחד שיצר פלטפורמה שעוזרת לתלמידיו לווסת את עצמם בזמן אמת — ומלמדת אותם ואת המורה איך הם הכי מצליחים להירגע, עם דאטה אמיתי מהמערכת.", url: "https://truthful-mind-sync-flow.base44.app/Dashboard" },
-      { n: "07", authors: "תמר", title: "החקלאי והתלמיד", desc: "מערכת שמתאמת בין הצרכים של החקלאי לתלמידים בבתי ספר לחקלאות — ושמה את האחריות על התלמיד.", url: "https://tangible-farm-shift-sync.base44.app/" },
-      { n: "08", authors: "רייצ'ל", title: "מורה־פנוי, עכשיו", desc: "רייצ'ל חיפשה דרך למקסם את זמן הפרטני של מורים עם תלמידים, בלו\"ז עמוס. היא יצרה אפליקציה בסגנון טינדר, שבה תלמידים רואים אילו מורים זמינים בשעות הפנויות שלהם — ומחליקים שמאלה וימינה.", url: "https://partani-match-now.base44.app/" },
+      { n: "01", authors: "גפן וג'וזפין", title: "חדר מורים שמחבק", desc: "חיפשו דרך לחזק את תחושת השייכות של המורים בחדר המורים — בעולם שבו תרבות ההערכה למורים לא תמיד קיימת.", url: "https://school-pulse-care.base44.app/", image: "https://negevedulab.lovable.app/assets/gefen-DO77bTm9.jpg" },
+      { n: "02", authors: "יעל", title: "בגרות בעיצוב — כמשחק", desc: "משחק שנועד להפוך את החלק היבש והתיאורטי של הבגרות בעיצוב לחוויה מהנה יותר.", url: "https://design-odyssey-play.base44.app/", image: "https://negevedulab.lovable.app/assets/yael-WRSejPr4.jpg" },
+      { n: "03", authors: "מיכאל", title: "מרכז ההתאמות", desc: "יוצר אפליקציות סדרתי, שהפעם עיצב מערכת שלמה לריכוז כל נושא ההתאמות בבית הספר — ואולי בקרוב בכל המועצה.", url: "https://exam-adjust-pro.base44.app/", image: "https://negevedulab.lovable.app/assets/michael-DdAgdKpM.jpg" },
+      { n: "04", authors: "הילה", title: "התקציב של המורה", desc: "המנהלנית המסורה של בי\"ס צין באה ללמוד ופיתחה מערכת שמאפשרת למורים לראות ולנהל את התקציב שלהם. העצמת מורים, כבר אמרנו?", url: "https://teacher-budget-buddy.base44.app/", image: "https://negevedulab.lovable.app/assets/hila-DvT0Qaou.jpg" },
+      { n: "05", authors: "שרון", title: "יועץ אקלים כיתתי", desc: "אפליקציה שנותנת עצות לניהול הכיתה ומענה לבעיות אקלים כיתתי — לפי השכבה והבעיה הספציפית שעולה.", url: "https://sos-lamore.netlify.app/", image: "https://negevedulab.lovable.app/assets/sharon-C6oBYorA.jpg" },
+      { n: "06", authors: "גבריאל", title: "ויסות בזמן אמת", desc: "מורה לחינוך מיוחד שיצר פלטפורמה שעוזרת לתלמידיו לווסת את עצמם בזמן אמת — ומלמדת אותם ואת המורה איך הם הכי מצליחים להירגע, עם דאטה אמיתי מהמערכת.", url: "https://truthful-mind-sync-flow.base44.app/Dashboard", image: "https://negevedulab.lovable.app/assets/gabriel-BiNni7Y7.jpg" },
+      { n: "07", authors: "תמר", title: "החקלאי והתלמיד", desc: "מערכת שמתאמת בין הצרכים של החקלאי לתלמידים בבתי ספר לחקלאות — ושמה את האחריות על התלמיד.", url: "https://tangible-farm-shift-sync.base44.app/", image: "https://negevedulab.lovable.app/assets/tamar-fR5wKD_o.jpg" },
+      { n: "08", authors: "רייצ'ל", title: "מורה־פנוי, עכשיו", desc: "רייצ'ל חיפשה דרך למקסם את זמן הפרטני של מורים עם תלמידים, בלו\"ז עמוס. היא יצרה אפליקציה בסגנון טינדר, שבה תלמידים רואים אילו מורים זמינים בשעות הפנויות שלהם — ומחליקים שמאלה וימינה.", url: "https://partani-match-now.base44.app/", image: "https://negevedulab.lovable.app/assets/rachel-DQ517nSS.jpg" },
     ],
   },
 ];
+
 
 function Apps() {
   const totalApps = cohorts.reduce((sum, c) => sum + c.apps.length, 0);
