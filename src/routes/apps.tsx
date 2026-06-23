@@ -160,27 +160,49 @@ function Apps() {
                 href={a.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col bg-card border border-border/60 rounded-2xl p-6 hover:border-accent/60 hover:-translate-y-1 transition-all shadow-[0_10px_30px_-20px_oklch(0_0_0/0.5)]"
+                className="group relative flex flex-col bg-card border border-border/60 rounded-2xl overflow-hidden hover:border-accent/60 hover:-translate-y-1 transition-all shadow-[0_10px_30px_-20px_oklch(0_0_0/0.5)]"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <span className="text-xs font-black text-accent tracking-wider">{a.n}</span>
-                  <span className="text-xs text-muted-foreground">{a.authors}</span>
-                </div>
-                <div className="font-bold text-lg mt-3 leading-snug">{a.title}</div>
-                <p className="text-sm text-muted-foreground mt-2 leading-relaxed flex-1">{a.desc}</p>
-                <div className="mt-5 pt-4 border-t border-border/60 flex items-center justify-between text-sm">
-                  {a.school ? (
-                    <span className="text-muted-foreground">{a.school}</span>
+                <div
+                  className="relative aspect-[16/10] overflow-hidden"
+                  style={a.image ? undefined : { background: a.gradient }}
+                >
+                  {a.image ? (
+                    <img
+                      src={a.image}
+                      alt={`תצוגה מקדימה של ${a.title}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   ) : (
-                    <span />
+                    <div className="absolute inset-0 flex items-end p-5">
+                      <div className="text-white/95 font-black text-2xl leading-tight drop-shadow-md">
+                        {a.title}
+                      </div>
+                    </div>
                   )}
-                  <span className="text-accent font-bold group-hover:translate-x-[-4px] transition-transform">
-                    פתיחת האפליקציה ←
+                  <span className="absolute top-3 right-3 text-[11px] font-black tracking-wider bg-black/60 backdrop-blur text-white px-2.5 py-1 rounded-full">
+                    {a.n}
                   </span>
+                </div>
+                <div className="flex flex-col flex-1 p-6">
+                  <div className="text-xs text-muted-foreground">{a.authors}</div>
+                  <div className="font-bold text-lg mt-2 leading-snug">{a.title}</div>
+                  <p className="text-sm text-muted-foreground mt-2 leading-relaxed flex-1">{a.desc}</p>
+                  <div className="mt-5 pt-4 border-t border-border/60 flex items-center justify-between text-sm">
+                    {a.school ? (
+                      <span className="text-muted-foreground">{a.school}</span>
+                    ) : (
+                      <span />
+                    )}
+                    <span className="text-accent font-bold group-hover:translate-x-[-4px] transition-transform">
+                      פתיחת האפליקציה ←
+                    </span>
+                  </div>
                 </div>
               </a>
             ))}
           </div>
+
         </section>
       ))}
 
