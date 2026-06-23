@@ -48,13 +48,6 @@ export default function SiteShell() {
               למורים
             </Link>
             <Link
-              to="/ashkelon-coast"
-              className="px-3 py-2 rounded-md hover:text-primary transition-colors"
-              activeProps={{ className: "text-primary" }}
-            >
-              חוף אשקלון
-            </Link>
-            <Link
               to="/apps"
               className="px-3 py-2 rounded-md hover:text-primary transition-colors"
               activeProps={{ className: "text-primary" }}
