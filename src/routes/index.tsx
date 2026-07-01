@@ -113,6 +113,19 @@ function Home() {
         </div>
       </section>
 
+      {/* PROMO VIDEO */}
+      <section className="relative max-w-6xl mx-auto px-6 py-12">
+        <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-card shadow-2xl">
+          <video
+            src={unboxingVideo.url}
+            poster={img2}
+            controls
+            playsInline
+            className="w-full aspect-video object-cover"
+          />
+        </div>
+      </section>
+
       {/* WHO */}
       <section className="relative max-w-6xl mx-auto px-6 py-16">
         <SectionTitle eyebrow="למי זה מיועד?" title='בנוי לפסג"ות, מועצות ורשתות' />
