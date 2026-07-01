@@ -118,7 +118,6 @@ function Home() {
         <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-card shadow-2xl">
           <video
             src={unboxingVideo.url}
-            poster={img2}
             controls
             playsInline
             className="w-full aspect-video object-cover"

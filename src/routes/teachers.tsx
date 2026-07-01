@@ -64,7 +64,6 @@ function Teachers() {
         <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-card shadow-2xl">
           <video
             src={unboxingVideo.url}
-            poster={img}
             controls
             playsInline
             className="w-full aspect-video object-cover"
