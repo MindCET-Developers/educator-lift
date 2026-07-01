@@ -59,6 +59,19 @@ function Teachers() {
         </div>
       </section>
 
+      {/* PROMO VIDEO */}
+      <section className="max-w-5xl mx-auto px-6 py-12">
+        <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-card shadow-2xl">
+          <video
+            src={unboxingVideo.url}
+            poster={img}
+            controls
+            playsInline
+            className="w-full aspect-video object-cover"
+          />
+        </div>
+      </section>
+
       <section className="max-w-5xl mx-auto px-6 py-16">
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-[oklch(0.25_0.1_275)] to-[oklch(0.18_0.09_270)] p-10 md:p-14">
           <div className="absolute -top-20 -left-20 w-60 h-60 rounded-full" style={{ background: "var(--shape-purple)", filter: "blur(60px)", opacity: 0.4 }} />
