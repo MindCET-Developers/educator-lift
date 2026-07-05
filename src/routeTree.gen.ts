@@ -9,12 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WesternGalileeRouteImport } from './routes/western-galilee'
 import { Route as TeachersRouteImport } from './routes/teachers'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as AshkelonCoastRouteImport } from './routes/ashkelon-coast'
 import { Route as AppsRouteImport } from './routes/apps'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WesternGalileeRoute = WesternGalileeRouteImport.update({
+  id: '/western-galilee',
+  path: '/western-galilee',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TeachersRoute = TeachersRouteImport.update({
   id: '/teachers',
   path: '/teachers',
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/ashkelon-coast': typeof AshkelonCoastRoute
   '/careers': typeof CareersRoute
   '/teachers': typeof TeachersRoute
+  '/western-galilee': typeof WesternGalileeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/ashkelon-coast': typeof AshkelonCoastRoute
   '/careers': typeof CareersRoute
   '/teachers': typeof TeachersRoute
+  '/western-galilee': typeof WesternGalileeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +70,33 @@ export interface FileRoutesById {
   '/ashkelon-coast': typeof AshkelonCoastRoute
   '/careers': typeof CareersRoute
   '/teachers': typeof TeachersRoute
+  '/western-galilee': typeof WesternGalileeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/apps' | '/ashkelon-coast' | '/careers' | '/teachers'
+  fullPaths:
+    | '/'
+    | '/apps'
+    | '/ashkelon-coast'
+    | '/careers'
+    | '/teachers'
+    | '/western-galilee'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/apps' | '/ashkelon-coast' | '/careers' | '/teachers'
-  id: '__root__' | '/' | '/apps' | '/ashkelon-coast' | '/careers' | '/teachers'
+  to:
+    | '/'
+    | '/apps'
+    | '/ashkelon-coast'
+    | '/careers'
+    | '/teachers'
+    | '/western-galilee'
+  id:
+    | '__root__'
+    | '/'
+    | '/apps'
+    | '/ashkelon-coast'
+    | '/careers'
+    | '/teachers'
+    | '/western-galilee'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,10 +105,18 @@ export interface RootRouteChildren {
   AshkelonCoastRoute: typeof AshkelonCoastRoute
   CareersRoute: typeof CareersRoute
   TeachersRoute: typeof TeachersRoute
+  WesternGalileeRoute: typeof WesternGalileeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/western-galilee': {
+      id: '/western-galilee'
+      path: '/western-galilee'
+      fullPath: '/western-galilee'
+      preLoaderRoute: typeof WesternGalileeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/teachers': {
       id: '/teachers'
       path: '/teachers'
@@ -125,6 +161,7 @@ const rootRouteChildren: RootRouteChildren = {
   AshkelonCoastRoute: AshkelonCoastRoute,
   CareersRoute: CareersRoute,
   TeachersRoute: TeachersRoute,
+  WesternGalileeRoute: WesternGalileeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
