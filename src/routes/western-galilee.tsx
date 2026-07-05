@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
-import photo from "@/assets/ashkelon-teachers.jpg.asset.json";
 import moonaLogo from "@/assets/moona-logo.jpeg.asset.json";
 import pisgaLogo from "@/assets/pisga-akko-logo.jpeg.asset.json";
 
@@ -13,7 +12,6 @@ export const Route = createFileRoute("/western-galilee")({
       { name: "description", content: "הכשרת Unboxing Challenge למורות ומורים באזור הגליל המערבי. בשיתוף פסג\"ה עכו ו-MOONA." },
       { property: "og:title", content: "גליל מערבי – הכשרת Unboxing Challenge" },
       { property: "og:description", content: "הצטרפו להכשרה האזורית לפיתוח אפליקציות AI לכיתה בגליל המערבי." },
-      { property: "og:image", content: photo.url },
     ],
   }),
   component: WesternGalilee,
@@ -21,7 +19,6 @@ export const Route = createFileRoute("/western-galilee")({
 
 const highlights = [
   { t: "מתכונת היברידית", d: "שילוב של מפגשים מקוונים ומפגשים פרונטליים באזור הגליל המערבי." },
-  { t: "Demo Day במיינדסט", d: "מפגש הסיום וההצגה של האפליקציות שלכם יתקיים במתחם החדשנות של MindCET בירוחם." },
   { t: "30 ש\"ש גמול השתלמות", d: "ההכשרה מזכה ב-30 שעות שנתיות של גמול השתלמות." },
   { t: "ללא ידע קודם בתכנות", d: "בונים אפליקציית AI אמיתית לאתגר פדגוגי שלכם – שלב אחר שלב." },
 ];
@@ -65,24 +62,15 @@ function WesternGalilee() {
       </section>
 
       <section id="details" className="max-w-5xl mx-auto px-6 py-10">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <img
-            src={photo.url}
-            alt="מורות ומורים מצטיינים בהכשרת Unboxing Challenge"
-            className="rounded-3xl w-full aspect-[4/3] object-cover border border-white/10"
-          />
-          <div>
-            <h2 className="text-3xl md:text-4xl">איך זה עובד</h2>
-            <ul className="mt-6 space-y-4">
-              {highlights.map((b) => (
-                <li key={b.t} className="bg-card border border-border/60 rounded-2xl p-5">
-                  <div className="font-bold text-lg">{b.t}</div>
-                  <div className="text-muted-foreground mt-1">{b.d}</div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <h2 className="text-3xl md:text-4xl">איך זה עובד</h2>
+        <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {highlights.map((b) => (
+            <li key={b.t} className="bg-card border border-border/60 rounded-2xl p-5">
+              <div className="font-bold text-lg">{b.t}</div>
+              <div className="text-muted-foreground mt-1">{b.d}</div>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="max-w-5xl mx-auto px-6 py-10">
