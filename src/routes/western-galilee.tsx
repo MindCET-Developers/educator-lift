@@ -26,12 +26,7 @@ function WesternGalilee() {
     <div className="relative">
       <BackgroundShapes />
 
-      <section className="max-w-5xl mx-auto px-6 pt-12 pb-12">
-        <div className="flex flex-wrap items-center justify-start gap-4 mb-6">
-          <HeroLogo src={mindcetLogo.url} name="Mindcet" className="h-10" />
-          <HeroLogo src={pisgaLogo.url} name='פסג"ה עכו' className="h-10" />
-          <HeroLogo src={moonaLogo.url} name="MOONA" className="h-8" />
-        </div>
+      <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
         <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase mb-6">
           <span className="w-2 h-2 rounded-full bg-accent" /> קוהורט אזורי · גליל מערבי
         </div>
