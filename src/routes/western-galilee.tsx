@@ -21,48 +21,6 @@ const highlights = [
   { t: "ללא ידע קודם בתכנות", d: "בונים אפליקציית AI אמיתית לאתגר פדגוגי שלכם – שלב אחר שלב." },
 ];
 
-function HeroLogo({ src, name, className = "h-10" }: { src: string; name: string; className?: string }) {
-  const [failed, setFailed] = useState(false);
-
-  return (
-    <div className="bg-white rounded-xl px-4 py-2 flex items-center justify-center h-16 min-w-[120px]">
-      {failed ? (
-        <span className="text-slate-900 font-black text-sm leading-none">{name}</span>
-      ) : (
-        <img
-          src={src}
-          alt={name}
-          className={`${className} max-w-[140px] object-contain`}
-          loading="eager"
-          decoding="async"
-          onError={() => setFailed(true)}
-        />
-      )}
-    </div>
-  );
-}
-
-function SponsorLogo({ src, name, className = "h-24" }: { src: string; name: string; className?: string }) {
-  const [failed, setFailed] = useState(false);
-
-  return (
-    <div className="bg-white rounded-2xl p-6 flex items-center justify-center min-h-[120px] min-w-[200px]">
-      {failed ? (
-        <span className="text-slate-900 font-black text-2xl leading-none">{name}</span>
-      ) : (
-        <img
-          src={src}
-          alt={name}
-          className={`${className} max-w-[260px] object-contain`}
-          loading="eager"
-          decoding="async"
-          onError={() => setFailed(true)}
-        />
-      )}
-    </div>
-  );
-}
-
 function WesternGalilee() {
   return (
     <div className="relative">
