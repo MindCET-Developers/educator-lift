@@ -35,6 +35,9 @@ function HeaderLogo({ src, alt, className }: { src: string; alt: string; classNa
 }
 
 export default function SiteShell() {
+  const router = useRouter();
+  const isWesternGalilee = router.state.location.pathname === "/western-galilee";
+
   return (
     <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
@@ -43,6 +46,12 @@ export default function SiteShell() {
             <div className="bg-white rounded-lg px-3 py-2">
               <img src={logo} alt="MindCET" className="h-7 w-auto" />
             </div>
+            {isWesternGalilee && (
+              <>
+                <HeaderLogo src={pisgaLogo.url} alt='פסג"ה עכו' className="h-7 w-auto" />
+                <HeaderLogo src={moonaLogo.url} alt="MOONA" className="h-7 w-auto" />
+              </>
+            )}
           </Link>
           <nav className="flex items-center gap-2 md:gap-6 text-sm md:text-base font-semibold">
             <Link
