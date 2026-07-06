@@ -1,9 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
 import { BackgroundShapes } from "@/components/SiteShell";
-import mindcetLogo from "@/assets/Mindcet-logo.png.asset.json";
-import moonaLogo from "@/assets/moona-logo.jpeg.asset.json";
-import pisgaLogo from "@/assets/pisga-akko-logo.jpeg.asset.json";
 
 const FORM_URL = "https://forms.gle/PxcYhb19fkZa5UF99";
 
@@ -25,59 +21,12 @@ const highlights = [
   { t: "ללא ידע קודם בתכנות", d: "בונים אפליקציית AI אמיתית לאתגר פדגוגי שלכם – שלב אחר שלב." },
 ];
 
-function HeroLogo({ src, name, className = "h-10" }: { src: string; name: string; className?: string }) {
-  const [failed, setFailed] = useState(false);
-
-  return (
-    <div className="bg-white rounded-xl px-4 py-2 flex items-center justify-center h-16 min-w-[120px]">
-      {failed ? (
-        <span className="text-slate-900 font-black text-sm leading-none">{name}</span>
-      ) : (
-        <img
-          src={src}
-          alt={name}
-          className={`${className} max-w-[140px] object-contain`}
-          loading="eager"
-          decoding="async"
-          onError={() => setFailed(true)}
-        />
-      )}
-    </div>
-  );
-}
-
-function SponsorLogo({ src, name, className = "h-24" }: { src: string; name: string; className?: string }) {
-  const [failed, setFailed] = useState(false);
-
-  return (
-    <div className="bg-white rounded-2xl p-6 flex items-center justify-center min-h-[120px] min-w-[200px]">
-      {failed ? (
-        <span className="text-slate-900 font-black text-2xl leading-none">{name}</span>
-      ) : (
-        <img
-          src={src}
-          alt={name}
-          className={`${className} max-w-[260px] object-contain`}
-          loading="eager"
-          decoding="async"
-          onError={() => setFailed(true)}
-        />
-      )}
-    </div>
-  );
-}
-
 function WesternGalilee() {
   return (
     <div className="relative">
       <BackgroundShapes />
 
-      <section className="max-w-5xl mx-auto px-6 pt-12 pb-12">
-        <div className="flex flex-wrap items-center justify-start gap-4 mb-6">
-          <HeroLogo src={mindcetLogo.url} name="Mindcet" className="h-10" />
-          <HeroLogo src={pisgaLogo.url} name='פסג"ה עכו' className="h-10" />
-          <HeroLogo src={moonaLogo.url} name="MOONA" className="h-8" />
-        </div>
+      <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
         <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase mb-6">
           <span className="w-2 h-2 rounded-full bg-accent" /> קוהורט אזורי · גליל מערבי
         </div>
@@ -120,18 +69,6 @@ function WesternGalilee() {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="max-w-5xl mx-auto px-6 py-10">
-        <div className="text-center">
-          <div className="text-accent font-bold uppercase tracking-wider text-sm">בשיתוף</div>
-          <h2 className="text-3xl md:text-4xl mt-3">השותפים שלנו</h2>
-          <p className="mt-4 text-muted-foreground">ההכשרה מתקיימת בשיתוף פעולה עם:</p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-8">
-            <SponsorLogo src={pisgaLogo.url} name='פסג"ה עכו' />
-            <SponsorLogo src={moonaLogo.url} name="MOONA" className="h-20" />
-          </div>
-        </div>
       </section>
 
       <section className="max-w-5xl mx-auto px-6 py-16">
