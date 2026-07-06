@@ -24,6 +24,16 @@ export function BackgroundShapes() {
 }
 
 
+function HeaderLogo({ src, alt, className }: { src: string; alt: string; className?: string }) {
+  const [failed, setFailed] = useState(false);
+  if (failed) return null;
+  return (
+    <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center">
+      <img src={src} alt={alt} className={className} loading="eager" decoding="async" onError={() => setFailed(true)} />
+    </div>
+  );
+}
+
 export default function SiteShell() {
   return (
     <div className="min-h-screen flex flex-col">
