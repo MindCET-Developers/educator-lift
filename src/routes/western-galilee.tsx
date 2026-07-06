@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { BackgroundShapes } from "@/components/SiteShell";
+import mindcetLogo from "@/assets/Mindcet-logo.png.asset.json";
 import moonaLogo from "@/assets/moona-logo.jpeg.asset.json";
 import pisgaLogo from "@/assets/pisga-akko-logo.jpeg.asset.json";
 
@@ -23,6 +24,27 @@ const highlights = [
   { t: "30 ש\"ש גמול השתלמות", d: "ההכשרה מזכה ב-30 שעות שנתיות של גמול השתלמות." },
   { t: "ללא ידע קודם בתכנות", d: "בונים אפליקציית AI אמיתית לאתגר פדגוגי שלכם – שלב אחר שלב." },
 ];
+
+function HeroLogo({ src, name, className = "h-10" }: { src: string; name: string; className?: string }) {
+  const [failed, setFailed] = useState(false);
+
+  return (
+    <div className="bg-white rounded-xl px-4 py-2 flex items-center justify-center h-16 min-w-[120px]">
+      {failed ? (
+        <span className="text-slate-900 font-black text-sm leading-none">{name}</span>
+      ) : (
+        <img
+          src={src}
+          alt={name}
+          className={`${className} max-w-[140px] object-contain`}
+          loading="eager"
+          decoding="async"
+          onError={() => setFailed(true)}
+        />
+      )}
+    </div>
+  );
+}
 
 function SponsorLogo({ src, name, className = "h-24" }: { src: string; name: string; className?: string }) {
   const [failed, setFailed] = useState(false);
@@ -50,7 +72,12 @@ function WesternGalilee() {
     <div className="relative">
       <BackgroundShapes />
 
-      <section className="max-w-5xl mx-auto px-6 pt-16 pb-12">
+      <section className="max-w-5xl mx-auto px-6 pt-12 pb-12">
+        <div className="flex flex-wrap items-center justify-start gap-4 mb-6">
+          <HeroLogo src={mindcetLogo.url} name="Mindcet" className="h-10" />
+          <HeroLogo src={pisgaLogo.url} name='פסג"ה עכו' className="h-10" />
+          <HeroLogo src={moonaLogo.url} name="MOONA" className="h-8" />
+        </div>
         <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase mb-6">
           <span className="w-2 h-2 rounded-full bg-accent" /> קוהורט אזורי · גליל מערבי
         </div>
