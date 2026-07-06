@@ -71,18 +71,6 @@ function WesternGalilee() {
         </ul>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 py-10">
-        <div className="text-center">
-          <div className="text-accent font-bold uppercase tracking-wider text-sm">בשיתוף</div>
-          <h2 className="text-3xl md:text-4xl mt-3">השותפים שלנו</h2>
-          <p className="mt-4 text-muted-foreground">ההכשרה מתקיימת בשיתוף פעולה עם:</p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-8">
-            <SponsorLogo src={pisgaLogo.url} name='פסג"ה עכו' />
-            <SponsorLogo src={moonaLogo.url} name="MOONA" className="h-20" />
-          </div>
-        </div>
-      </section>
-
       <section className="max-w-5xl mx-auto px-6 py-16">
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-[oklch(0.25_0.1_275)] to-[oklch(0.18_0.09_270)] p-8 md:p-12">
           <div className="absolute -top-20 -left-20 w-60 h-60 rounded-full" style={{ background: "var(--shape-purple)", filter: "blur(60px)", opacity: 0.4 }} />
