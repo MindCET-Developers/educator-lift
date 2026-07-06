@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { BackgroundShapes } from "@/components/SiteShell";
 import moonaLogo from "@/assets/moona-logo.jpeg.asset.json";
 import pisgaLogo from "@/assets/pisga-akko-logo.jpeg.asset.json";
@@ -22,6 +23,27 @@ const highlights = [
   { t: "30 ש\"ש גמול השתלמות", d: "ההכשרה מזכה ב-30 שעות שנתיות של גמול השתלמות." },
   { t: "ללא ידע קודם בתכנות", d: "בונים אפליקציית AI אמיתית לאתגר פדגוגי שלכם – שלב אחר שלב." },
 ];
+
+function SponsorLogo({ src, name, className = "h-24" }: { src: string; name: string; className?: string }) {
+  const [failed, setFailed] = useState(false);
+
+  return (
+    <div className="bg-white rounded-2xl p-6 flex items-center justify-center min-h-[120px] min-w-[200px]">
+      {failed ? (
+        <span className="text-slate-900 font-black text-2xl leading-none">{name}</span>
+      ) : (
+        <img
+          src={src}
+          alt={name}
+          className={`${className} max-w-[260px] object-contain`}
+          loading="eager"
+          decoding="async"
+          onError={() => setFailed(true)}
+        />
+      )}
+    </div>
+  );
+}
 
 function WesternGalilee() {
   return (
@@ -79,12 +101,8 @@ function WesternGalilee() {
           <h2 className="text-3xl md:text-4xl mt-3">השותפים שלנו</h2>
           <p className="mt-4 text-muted-foreground">ההכשרה מתקיימת בשיתוף פעולה עם:</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-8">
-            <div className="bg-white rounded-2xl p-6 flex items-center justify-center min-h-[120px] min-w-[200px]">
-              <img src={pisgaLogo.url} alt='פסג"ה עכו' className="h-24 w-auto object-contain" />
-            </div>
-            <div className="bg-white rounded-2xl p-6 flex items-center justify-center min-h-[120px] min-w-[200px]">
-              <img src={moonaLogo.url} alt="MOONA" className="h-24 w-auto object-contain" />
-            </div>
+            <SponsorLogo src={pisgaLogo.url} name='פסג"ה עכו' />
+            <SponsorLogo src={moonaLogo.url} name="MOONA" className="h-20" />
           </div>
         </div>
       </section>
