@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
 import img from "@/assets/teachers-workshop.jpg";
-import unboxingVideo from "@/assets/unboxing-challenge.mp4.asset.json";
+import unboxingVideo from "@/assets/unboxing-challenge.mp4";
 
 export const Route = createFileRoute("/teachers")({
   head: () => ({
@@ -62,12 +62,7 @@ function Teachers() {
       {/* PROMO VIDEO */}
       <section className="max-w-5xl mx-auto px-6 py-12">
         <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-card shadow-2xl">
-          <video
-            src={unboxingVideo.url}
-            controls
-            playsInline
-            className="w-full aspect-video object-cover"
-          />
+          <video src={unboxingVideo} controls playsInline className="w-full aspect-video object-cover" />
         </div>
       </section>
 
