@@ -1,9 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
 import { BackgroundShapes } from "@/components/SiteShell";
-import mindcetLogo from "@/assets/Mindcet-logo.png.asset.json";
-import moonaLogo from "@/assets/moona-logo.jpeg.asset.json";
-import pisgaLogo from "@/assets/pisga-akko-logo.jpeg.asset.json";
 
 const FORM_URL = "https://forms.gle/PxcYhb19fkZa5UF99";
 
