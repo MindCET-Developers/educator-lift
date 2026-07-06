@@ -1,5 +1,8 @@
-import { Link, Outlet } from "@tanstack/react-router";
+import { Link, Outlet, useRouter } from "@tanstack/react-router";
+import { useState } from "react";
 import logo from "@/assets/mindcet-logo.png";
+import pisgaLogo from "@/assets/pisga-akko-logo.jpeg.asset.json";
+import moonaLogo from "@/assets/moona-logo.jpeg.asset.json";
 
 export function BackgroundShapes() {
   return (
