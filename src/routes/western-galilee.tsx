@@ -60,6 +60,16 @@ function WesternGalilee() {
         </div>
       </section>
 
+      <section className="max-w-5xl mx-auto px-6 pb-12">
+        <img
+          src={flyerAsset.url}
+          alt="פלייר הכשרת Unboxing Challenge – גליל מערבי"
+          className="w-full rounded-2xl border border-white/10 shadow-2xl"
+          loading="lazy"
+          decoding="async"
+        />
+      </section>
+
       <section id="details" className="max-w-5xl mx-auto px-6 py-10">
         <h2 className="text-3xl md:text-4xl">איך זה עובד</h2>
         <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
