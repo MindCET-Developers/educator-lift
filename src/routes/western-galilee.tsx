@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
 import flyerAsset from "@/assets/western-galilee-flyer.jpg.asset.json";
+import videoAsset from "@/assets/unboxing-challenge.mp4.asset.json";
 
 const FORM_URL = "https://forms.gle/PxcYhb19fkZa5UF99";
 
@@ -58,6 +59,19 @@ function WesternGalilee() {
             פרטים נוספים
           </a>
         </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-6 pb-8">
+        <video
+          src={videoAsset.url}
+          controls
+          playsInline
+          muted
+          className="w-full rounded-2xl border border-white/10 shadow-2xl"
+          poster={flyerAsset.url}
+        >
+          הדפדפן שלך לא תומך בהצגת סרטוני וידאו.
+        </video>
       </section>
 
       <section className="max-w-5xl mx-auto px-6 pb-12">
