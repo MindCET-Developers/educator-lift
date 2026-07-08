@@ -67,8 +67,8 @@ function WesternGalilee() {
           controls
           playsInline
           muted
+          preload="metadata"
           className="w-full rounded-2xl border border-white/10 shadow-2xl"
-          poster={flyerAsset.url}
         >
           הדפדפן שלך לא תומך בהצגת סרטוני וידאו.
         </video>
