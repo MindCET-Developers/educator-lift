@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
+import flyerAsset from "@/assets/western-galilee-flyer.jpg.asset.json";
 
 const FORM_URL = "https://forms.gle/PxcYhb19fkZa5UF99";
 
@@ -57,6 +58,16 @@ function WesternGalilee() {
             פרטים נוספים
           </a>
         </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-6 pb-12">
+        <img
+          src={flyerAsset.url}
+          alt="פלייר הכשרת Unboxing Challenge – גליל מערבי"
+          className="w-full rounded-2xl border border-white/10 shadow-2xl"
+          loading="lazy"
+          decoding="async"
+        />
       </section>
 
       <section id="details" className="max-w-5xl mx-auto px-6 py-10">
