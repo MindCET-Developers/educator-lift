@@ -61,6 +61,19 @@ function WesternGalilee() {
         </div>
       </section>
 
+      <section className="max-w-5xl mx-auto px-6 pb-8">
+        <video
+          src={videoAsset.url}
+          controls
+          playsInline
+          muted
+          className="w-full rounded-2xl border border-white/10 shadow-2xl"
+          poster={flyerAsset.url}
+        >
+          הדפדפן שלך לא תומך בהצגת סרטוני וידאו.
+        </video>
+      </section>
+
       <section className="max-w-5xl mx-auto px-6 pb-12">
         <img
           src={flyerAsset.url}
