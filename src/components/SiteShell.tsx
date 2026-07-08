@@ -1,8 +1,8 @@
 import { Link, Outlet, useRouter } from "@tanstack/react-router";
-import { useState } from "react";
 import logo from "@/assets/mindcet-logo.png";
-import pisgaLogo from "@/assets/pisga-akko-logo.jpeg.asset.json";
-import moonaLogo from "@/assets/moona-logo.jpeg.asset.json";
+
+const moonaLogo = "/media/moona-logo.png";
+const pisgaLogo = "/media/pisga-akko-logo.png";
 
 export function BackgroundShapes() {
   return (
@@ -25,11 +25,9 @@ export function BackgroundShapes() {
 
 
 function HeaderLogo({ src, alt, className }: { src: string; alt: string; className?: string }) {
-  const [failed, setFailed] = useState(false);
-  if (failed) return null;
   return (
-    <div className="bg-white rounded-lg px-3 py-2 flex items-center justify-center">
-      <img src={src} alt={alt} className={className} loading="eager" decoding="async" onError={() => setFailed(true)} />
+    <div className="bg-white rounded-lg px-3 py-2 flex h-11 items-center justify-center">
+      <img src={src} alt={alt} className={className} loading="eager" decoding="async" />
     </div>
   );
 }
@@ -48,8 +46,8 @@ export default function SiteShell() {
             </div>
             {isWesternGalilee && (
               <>
-                <HeaderLogo src={pisgaLogo.url} alt='פסג"ה עכו' className="h-7 w-auto" />
-                <HeaderLogo src={moonaLogo.url} alt="MOONA" className="h-7 w-auto" />
+                <HeaderLogo src={pisgaLogo} alt='פסג"ה עכו' className="h-7 w-auto" />
+                <HeaderLogo src={moonaLogo} alt="MOONA" className="h-8 w-auto" />
               </>
             )}
           </Link>

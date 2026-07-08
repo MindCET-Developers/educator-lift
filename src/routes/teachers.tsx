@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
 import img from "@/assets/teachers-workshop.jpg";
-import unboxingVideo from "@/assets/unboxing-challenge.mp4";
+
+const unboxingVideo = "/media/unboxing-challenge.mp4";
 
 export const Route = createFileRoute("/teachers")({
   head: () => ({

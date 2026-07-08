@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
-import flyerAsset from "@/assets/western-galilee-flyer.jpg.asset.json";
-import videoAsset from "@/assets/unboxing-challenge.mp4.asset.json";
 
 const FORM_URL = "https://forms.gle/PxcYhb19fkZa5UF99";
+const heroImage = "/media/western-galilee-hero.jpg";
+const scheduleImage = "/media/western-galilee-schedule.png";
+const unboxingVideo = "/media/unboxing-challenge.mp4";
 
 export const Route = createFileRoute("/western-galilee")({
   head: () => ({
@@ -63,24 +64,19 @@ function WesternGalilee() {
 
       <section className="max-w-5xl mx-auto px-6 pb-8">
         <video
-          src={videoAsset.url}
+          src={unboxingVideo}
+          poster={heroImage}
           controls
           playsInline
-          muted
-          preload="metadata"
-          className="w-full rounded-2xl border border-white/10 shadow-2xl"
-        >
-          הדפדפן שלך לא תומך בהצגת סרטוני וידאו.
-        </video>
+          className="w-full aspect-video rounded-3xl object-cover border border-white/10 bg-black shadow-2xl"
+        />
       </section>
 
       <section className="max-w-5xl mx-auto px-6 pb-12">
         <img
-          src={flyerAsset.url}
-          alt="פלייר הכשרת Unboxing Challenge – גליל מערבי"
-          className="w-full rounded-2xl border border-white/10 shadow-2xl"
-          loading="lazy"
-          decoding="async"
+          src={scheduleImage}
+          alt='לו"ז הכשרת Unboxing Challenge בגליל המערבי'
+          className="w-full rounded-3xl border border-white/10 bg-white shadow-2xl"
         />
       </section>
 

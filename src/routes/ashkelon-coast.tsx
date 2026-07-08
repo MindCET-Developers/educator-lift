@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
-import photo from "@/assets/ashkelon-teachers.jpg.asset.json";
+import photo from "@/assets/teacher-presenting.jpg";
 
 const FORM_URL = "https://forms.gle/1QTQ4xWqmB8xdaqZ9";
 
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/ashkelon-coast")({
       { name: "description", content: "הכשרת Unboxing Challenge למורות ומורים באזור חוף אשקלון. ימי רביעי 16:00–18:30, מפגשים מקוונים ופרונטליים במחלקת החינוך, דמו דיי במיינדסט." },
       { property: "og:title", content: "חוף אשקלון – הכשרת Unboxing Challenge" },
       { property: "og:description", content: "הצטרפו להכשרה האזורית לפיתוח אפליקציות AI לכיתה. ימי רביעי 16:00–18:30." },
-      { property: "og:image", content: photo.url },
+      { property: "og:image", content: photo },
     ],
   }),
   component: AshkelonCoast,
@@ -66,7 +66,7 @@ function AshkelonCoast() {
       <section id="details" className="max-w-5xl mx-auto px-6 py-10">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <img
-            src={photo.url}
+            src={photo}
             alt="מורות ומורים מצטיינים בהכשרת Unboxing Challenge"
             className="rounded-3xl w-full aspect-[4/3] object-cover border border-white/10"
           />

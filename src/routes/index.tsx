@@ -7,7 +7,8 @@ import img3 from "@/assets/training-2.jpg";
 import img4 from "@/assets/training-1.jpg";
 import img5 from "@/assets/training-3.jpg";
 import img6 from "@/assets/training-4.jpg";
-import unboxingVideo from "@/assets/unboxing-challenge.mp4";
+
+const unboxingVideo = "/media/unboxing-challenge.mp4";
 
 export const Route = createFileRoute("/")({
   head: () => ({
