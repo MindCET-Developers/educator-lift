@@ -45,10 +45,10 @@ export default function SiteShell() {
               <img src={logo} alt="MindCET" className="h-7 w-auto" />
             </div>
             {isWesternGalilee && (
-              <>
+              <div className="hidden md:flex items-center gap-3">
                 <HeaderLogo src={pisgaLogo} alt='פסג"ה עכו' className="h-7 w-auto" />
                 <HeaderLogo src={moonaLogo} alt="MOONA" className="h-8 w-auto" />
-              </>
+              </div>
             )}
           </Link>
           <nav className="flex items-center gap-2 md:gap-6 text-sm md:text-base font-semibold">
