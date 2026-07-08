@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
 import flyerAsset from "@/assets/western-galilee-flyer.jpg.asset.json";
+import videoAsset from "@/assets/unboxing-challenge.mp4.asset.json";
 
 const FORM_URL = "https://forms.gle/PxcYhb19fkZa5UF99";
 
