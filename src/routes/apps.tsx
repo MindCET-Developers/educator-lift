@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
 import { ProjectPlaceholder } from "@/components/ProjectPlaceholder";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export const Route = createFileRoute("/apps")({
   head: () => ({
@@ -12,6 +14,8 @@ export const Route = createFileRoute("/apps")({
           "גלריית האפליקציות שפיתחו מורות ומורים בהכשרות Vibe Coding של MindCET – פתרונות EdTech אמיתיים מהכיתה.",
       },
       { property: "og:title", content: "גלריית אפליקציות המורים | MindCET" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         property: "og:description",
         content:
@@ -51,6 +55,11 @@ const GRADIENTS = [
 const g = (i: number) => GRADIENTS[i % GRADIENTS.length];
 
 const cohorts: Cohort[] = [
+  {
+    name: 'אירוע "ממשתמשים ליוצרים" מוזיאון המדע 15/10/26',
+    subtitle: "",
+    apps: [],
+  },
   {
     name: "תכנית ברנקו וייס – מישרים",
     subtitle: "8 פרויקטים",
@@ -110,6 +119,35 @@ const cohorts: Cohort[] = [
   },
 ];
 
+function ProjectCard({ app: a, index }: { app: App; index: number }) {
+  const [imageFailed, setImageFailed] = useState(false);
+  return (
+    <a
+      href={a.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative flex flex-col bg-card border border-border/60 rounded-2xl overflow-hidden hover:border-accent/60 hover:-translate-y-1 transition-all"
+    >
+      <div className="relative aspect-[16/10] overflow-hidden">
+        {a.image && !imageFailed ? (
+          <img src={a.image} alt={`תצוגה מקדימה של ${a.title}`} loading="lazy" onError={() => setImageFailed(true)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        ) : (
+          <ProjectPlaceholder title={a.title} gradient={a.gradient ?? "var(--project-placeholder-background)"} index={index} />
+        )}
+        <span className="absolute top-3 right-3 text-[11px] font-black tracking-wider bg-background/70 backdrop-blur text-foreground px-2.5 py-1 rounded-full">{a.n}</span>
+      </div>
+      <div className="flex flex-col flex-1 p-6">
+        <div className="text-xs text-muted-foreground">{a.authors}</div>
+        <div className="font-bold text-lg mt-2 leading-snug">{a.title}</div>
+        <p className="text-sm text-muted-foreground mt-2 leading-relaxed flex-1">{a.desc}</p>
+        <div className="mt-5 pt-4 border-t border-border/60 flex items-center justify-between text-sm gap-3">
+          <span className="text-muted-foreground">{a.school ?? ""}</span>
+          <span className="text-accent font-bold group-hover:translate-x-[-4px] transition-transform">פתיחת האפליקציה ←</span>
+        </div>
+      </div>
+    </a>
+  );
+}
 
 function Apps() {
   const totalApps = cohorts.reduce((sum, c) => sum + c.apps.length, 0);
@@ -156,55 +194,19 @@ function Apps() {
               <h2 className="text-2xl md:text-3xl">{cohort.name}</h2>
               <span className="text-sm text-muted-foreground font-semibold">{cohort.subtitle}</span>
             </div>
+            {cohort.apps.length === 0 && (
+              <div className="border-y border-border/60 py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+                <p className="text-muted-foreground">עדיין לא הועלו פרויקטים מהאירוע.</p>
+                <Button asChild variant="outline" className="self-start sm:self-auto">
+                  <a href="https://forms.gle/KaoNBFUw3NLXQQ339" target="_blank" rel="noopener noreferrer">הוספת פרויקט מהאירוע ←</a>
+                </Button>
+              </div>
+            )}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {cohort.apps.map((a) => {
                 const currentIndex = appIndex++;
                 return (
-                  <a
-                    key={a.n + a.title}
-                    href={a.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative flex flex-col bg-card border border-border/60 rounded-2xl overflow-hidden hover:border-accent/60 hover:-translate-y-1 transition-all shadow-[0_10px_30px_-20px_oklch(0_0_0/0.5)]"
-                  >
-                    <div
-                      className="relative aspect-[16/10] overflow-hidden"
-                      style={a.image ? undefined : { background: a.gradient }}
-                    >
-                      {a.image ? (
-                        <img
-                          src={a.image}
-                          alt={`תצוגה מקדימה של ${a.title}`}
-                          loading="lazy"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                      ) : (
-                        <ProjectPlaceholder
-                          title={a.title}
-                          gradient={a.gradient ?? g(currentIndex)}
-                          index={currentIndex}
-                        />
-                      )}
-                      <span className="absolute top-3 right-3 text-[11px] font-black tracking-wider bg-background/70 backdrop-blur text-foreground px-2.5 py-1 rounded-full">
-                        {a.n}
-                      </span>
-                    </div>
-                    <div className="flex flex-col flex-1 p-6">
-                      <div className="text-xs text-muted-foreground">{a.authors}</div>
-                      <div className="font-bold text-lg mt-2 leading-snug">{a.title}</div>
-                      <p className="text-sm text-muted-foreground mt-2 leading-relaxed flex-1">{a.desc}</p>
-                      <div className="mt-5 pt-4 border-t border-border/60 flex items-center justify-between text-sm">
-                        {a.school ? (
-                          <span className="text-muted-foreground">{a.school}</span>
-                        ) : (
-                          <span />
-                        )}
-                        <span className="text-accent font-bold group-hover:translate-x-[-4px] transition-transform">
-                          פתיחת האפליקציה ←
-                        </span>
-                      </div>
-                    </div>
-                  </a>
+                  <ProjectCard key={a.n + a.title} app={a} index={currentIndex} />
                 );
               })}
             </div>

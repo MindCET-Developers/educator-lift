@@ -39,6 +39,7 @@
 
 :root {
   --radius: 0.75rem;
+  --project-placeholder-background: linear-gradient(135deg, var(--shape-purple), var(--card));
   /* Deep navy/indigo – matches MindCET flyer */
   --background: oklch(0.22 0.06 275);
   --foreground: oklch(0.97 0.01 280);
