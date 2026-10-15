@@ -3,8 +3,11 @@ import { BackgroundShapes } from "@/components/SiteShell";
 import { ProjectPlaceholder } from "@/components/ProjectPlaceholder";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useSuspenseQuery } from "@tanstack/react-query";
+import { eventProjectsOptions } from "@/lib/event-projects.functions";
 
 export const Route = createFileRoute("/apps")({
+  loader: ({ context }) => context.queryClient.ensureQueryData(eventProjectsOptions),
   head: () => ({
     meta: [
       { title: "אפליקציות מורים – Unboxing Challenge | MindCET" },
@@ -150,7 +153,11 @@ function ProjectCard({ app: a, index }: { app: App; index: number }) {
 }
 
 function Apps() {
-  const totalApps = cohorts.reduce((sum, c) => sum + c.apps.length, 0);
+  const { data: eventData } = useSuspenseQuery(eventProjectsOptions);
+  const displayedCohorts = cohorts.map((cohort, index) => index === 0
+    ? { ...cohort, apps: eventData.projects, subtitle: `${eventData.projects.length} פרויקטים` }
+    : cohort);
+  const totalApps = displayedCohorts.reduce((sum, c) => sum + c.apps.length, 0);
 
   return (
     <div className="relative">
@@ -188,7 +195,7 @@ function Apps() {
       {/* COHORTS */}
       {(() => {
         let appIndex = 0;
-        return cohorts.map((cohort) => (
+        return displayedCohorts.map((cohort) => (
           <section key={cohort.name} className="max-w-6xl mx-auto px-6 py-10">
             <div className="flex items-end justify-between mb-6 gap-4 flex-wrap">
               <h2 className="text-2xl md:text-3xl">{cohort.name}</h2>
@@ -196,7 +203,7 @@ function Apps() {
             </div>
             {cohort.apps.length === 0 && (
               <div className="border-y border-border/60 py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
-                <p className="text-muted-foreground">עדיין לא הועלו פרויקטים מהאירוע.</p>
+                <p className="text-muted-foreground">{eventData.unavailable ? "לא ניתן לטעון כרגע את הפרויקטים מהאירוע." : "עדיין לא הועלו פרויקטים מהאירוע."}</p>
                 <Button asChild variant="outline" className="self-start sm:self-auto">
                   <a href="https://forms.gle/KaoNBFUw3NLXQQ339" target="_blank" rel="noopener noreferrer">הוספת פרויקט מהאירוע ←</a>
                 </Button>

@@ -12,6 +12,8 @@ export const Route = createFileRoute("/western-galilee")({
       { title: "גליל מערבי – הכשרת Unboxing Challenge | MindCET" },
       { name: "description", content: "הכשרת Unboxing Challenge למורות ומורים באזור הגליל המערבי. בשיתוף פסג\"ה עכו ו-MOONA." },
       { property: "og:title", content: "גליל מערבי – הכשרת Unboxing Challenge" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "הצטרפו להכשרה האזורית לפיתוח אפליקציות AI לכיתה בגליל המערבי." },
     ],
   }),
