@@ -15,6 +15,7 @@ import { Route as CareersRouteImport } from './routes/careers'
 import { Route as AshkelonCoastRouteImport } from './routes/ashkelon-coast'
 import { Route as AppsRouteImport } from './routes/apps'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiPublicEventProjectImageRouteImport } from './routes/api/public/event-project-image'
 
 const WesternGalileeRoute = WesternGalileeRouteImport.update({
   id: '/western-galilee',
@@ -46,6 +47,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicEventProjectImageRoute =
+  ApiPublicEventProjectImageRouteImport.update({
+    id: '/api/public/event-project-image',
+    path: '/api/public/event-project-image',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByFullPath {
   '/careers': typeof CareersRoute
   '/teachers': typeof TeachersRoute
   '/western-galilee': typeof WesternGalileeRoute
+  '/api/public/event-project-image': typeof ApiPublicEventProjectImageRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +70,7 @@ export interface FileRoutesByTo {
   '/careers': typeof CareersRoute
   '/teachers': typeof TeachersRoute
   '/western-galilee': typeof WesternGalileeRoute
+  '/api/public/event-project-image': typeof ApiPublicEventProjectImageRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +80,7 @@ export interface FileRoutesById {
   '/careers': typeof CareersRoute
   '/teachers': typeof TeachersRoute
   '/western-galilee': typeof WesternGalileeRoute
+  '/api/public/event-project-image': typeof ApiPublicEventProjectImageRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +91,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/teachers'
     | '/western-galilee'
+    | '/api/public/event-project-image'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +100,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/teachers'
     | '/western-galilee'
+    | '/api/public/event-project-image'
   id:
     | '__root__'
     | '/'
@@ -97,6 +109,7 @@ export interface FileRouteTypes {
     | '/careers'
     | '/teachers'
     | '/western-galilee'
+    | '/api/public/event-project-image'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +119,7 @@ export interface RootRouteChildren {
   CareersRoute: typeof CareersRoute
   TeachersRoute: typeof TeachersRoute
   WesternGalileeRoute: typeof WesternGalileeRoute
+  ApiPublicEventProjectImageRoute: typeof ApiPublicEventProjectImageRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +166,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/event-project-image': {
+      id: '/api/public/event-project-image'
+      path: '/api/public/event-project-image'
+      fullPath: '/api/public/event-project-image'
+      preLoaderRoute: typeof ApiPublicEventProjectImageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,6 +183,7 @@ const rootRouteChildren: RootRouteChildren = {
   CareersRoute: CareersRoute,
   TeachersRoute: TeachersRoute,
   WesternGalileeRoute: WesternGalileeRoute,
+  ApiPublicEventProjectImageRoute: ApiPublicEventProjectImageRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
