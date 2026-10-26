@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BackgroundShapes } from "@/components/SiteShell";
-import img from "@/assets/careers.jpg";
+import img from "@/assets/teacher-presenting.jpg";
 
 export const Route = createFileRoute("/careers")({
   head: () => ({
