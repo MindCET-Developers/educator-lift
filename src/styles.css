@@ -40,14 +40,14 @@
 :root {
   --radius: 0.75rem;
   --project-placeholder-background: linear-gradient(135deg, var(--shape-purple), var(--card));
-  /* Deep navy/indigo – matches MindCET flyer */
+  /* Deep navy/indigo – matches Mindcet flyer */
   --background: oklch(0.22 0.06 275);
   --foreground: oklch(0.97 0.01 280);
   --card: oklch(0.27 0.05 275);
   --card-foreground: oklch(0.97 0.01 280);
   --popover: oklch(0.27 0.05 275);
   --popover-foreground: oklch(0.97 0.01 280);
-  /* Warm orange accent – MindCET vibe */
+  /* Warm orange accent – Mindcet vibe */
   --primary: oklch(0.72 0.16 50);
   --primary-foreground: oklch(0.2 0.05 275);
   --secondary: oklch(0.32 0.05 275);

@@ -7,9 +7,9 @@ const unboxingVideo = "/media/unboxing-challenge.mp4";
 export const Route = createFileRoute("/teachers")({
   head: () => ({
     meta: [
-      { title: "מורות ומורים – הצטרפו ל-Unboxing Challenge | MindCET" },
+      { title: "מורות ומורים – הצטרפו ל-Unboxing Challenge | Mindcet" },
       { name: "description", content: "מורות ומורים שמעוניינים להשתתף ב-Unboxing Challenge – השאירו פרטים ונחבר אתכם לקוהורט הקרוב באזורכם." },
-      { property: "og:title", content: "מורים מעוניינים – Unboxing Challenge | MindCET" },
+      { property: "og:title", content: "מורים מעוניינים – Unboxing Challenge | Mindcet" },
       { property: "og:description", content: "מעוניינים להשתתף בהכשרה? השאירו פרטים." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -9,7 +9,7 @@ const unboxingVideo = "/media/unboxing-challenge.mp4";
 export const Route = createFileRoute("/western-galilee")({
   head: () => ({
     meta: [
-      { title: "גליל מערבי – הכשרת Unboxing Challenge | MindCET" },
+      { title: "גליל מערבי – הכשרת Unboxing Challenge | Mindcet" },
       { name: "description", content: "הכשרת Unboxing Challenge למורות ומורים באזור הגליל המערבי. בשיתוף פסג\"ה עכו ו-MOONA." },
       { property: "og:title", content: "גליל מערבי – הכשרת Unboxing Challenge" },
       { property: "og:type", content: "website" },

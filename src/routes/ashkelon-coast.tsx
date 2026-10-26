@@ -7,10 +7,10 @@ const FORM_URL = "https://forms.gle/1QTQ4xWqmB8xdaqZ9";
 export const Route = createFileRoute("/ashkelon-coast")({
   head: () => ({
     meta: [
-      { title: "חוף אשקלון – הכשרת Unboxing Challenge | MindCET" },
-      { name: "description", content: "הכשרת Unboxing Challenge למורות ומורים באזור חוף אשקלון. ימי רביעי 16:00–18:30, מפגשים מקוונים ופרונטליים במחלקת החינוך, דמו דיי במיינדסט." },
+      { title: "חוף אשקלון – הכשרת Unboxing Challenge | Mindcet" },
+      { name: "description", content: "הכשרת Unboxing Challenge למורות ומורים באזור חוף אשקלון. ימי שני 16:00–18:30, מפגשים מקוונים ופרונטליים במחלקת החינוך, דמו דיי במיינדסט." },
       { property: "og:title", content: "חוף אשקלון – הכשרת Unboxing Challenge" },
-      { property: "og:description", content: "הצטרפו להכשרה האזורית לפיתוח אפליקציות AI לכיתה. ימי רביעי 16:00–18:30." },
+      { property: "og:description", content: "הצטרפו להכשרה האזורית לפיתוח אפליקציות AI לכיתה. ימי שני 16:00–18:30." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -19,9 +19,9 @@ export const Route = createFileRoute("/ashkelon-coast")({
 });
 
 const highlights = [
-  { t: "ההכשרה תתקיים בימי רביעי", d: "בשעות 16:00 – 18:30" },
-  { t: "מתכונת היברידית", d: "חלק מהמפגשים בזום, חלק במחלקת החינוך של מועצת חוף אשקלון ובמתחם החדשנות של MindCET בירוחם." },
-  { t: "Demo Day במיינדסט", d: "מפגש הסיום וההצגה של האפליקציות שלכם יתקיים במתחם החדשנות של MindCET בירוחם." },
+  { t: "ההכשרה תתקיים בימי שני", d: "בשעות 16:00 – 18:30" },
+  { t: "מתכונת היברידית", d: "חלק מהמפגשים בזום, חלק במחלקת החינוך של מועצת חוף אשקלון ובמתחם החדשנות של Mindcet בירוחם." },
+  { t: "Demo Day במיינדסט", d: "מפגש הסיום וההצגה של האפליקציות שלכם יתקיים במתחם החדשנות של Mindcet בירוחם." },
   { t: "30 ש\"ש גמול השתלמות", d: "ההכשרה מזכה ב-30 שעות שנתיות של גמול השתלמות." },
   { t: "ללא ידע קודם בתכנות", d: "בונים אפליקציית AI אמיתית לאתגר פדגוגי שלכם – שלב אחר שלב." },
 ];

@@ -5,10 +5,10 @@ import img from "@/assets/careers.jpg";
 export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
-      { title: "דרושים – מנחים מובילים | MindCET" },
-      { name: "description", content: "MindCET מגייסת מנחים מובילים להדרכת צוותי חינוך ברחבי הארץ, בדגש על אזור הנגב. הגישו מועמדות עכשיו." },
-      { property: "og:title", content: "דרושים – מנחים מובילים | MindCET" },
-      { property: "og:description", content: "MindCET מגייסת מנחים מובילים להדרכת צוותי חינוך ברחבי הארץ." },
+      { title: "דרושים – מנחים מובילים | Mindcet" },
+      { name: "description", content: "Mindcet מגייסת מנחים מובילים להדרכת צוותי חינוך ברחבי הארץ, בדגש על אזור הנגב. הגישו מועמדות עכשיו." },
+      { property: "og:title", content: "דרושים – מנחים מובילים | Mindcet" },
+      { property: "og:description", content: "Mindcet מגייסת מנחים מובילים להדרכת צוותי חינוך ברחבי הארץ." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -46,11 +46,11 @@ function Careers() {
           מנחים <span className="text-primary">מובילים</span>
         </h1>
         <p className="mt-6 text-xl text-muted-foreground max-w-3xl leading-relaxed">
-          MindCET מגייסת מנחים מעולים לפעילות ברחבי הארץ, בדגש על אזור הנגב.
+          Mindcet מגייסת מנחים מעולים לפעילות ברחבי הארץ, בדגש על אזור הנגב.
           התפקיד כולל הדרכה והנחייה של קבוצות וליווי תהליכי יזמות חינוכית.
         </p>
         <a
-          href="mailto:rachel@mindcet.io?subject=הגשת מועמדות – מנחה מוביל/ה ב-MindCET&body=שלום רחל,%0D%0Aמצורפים קורות החיים שלי לתפקיד מנחה מוביל/ה ב-MindCET.%0D%0A%0D%0Aשם:%0D%0Aטלפון:%0D%0Aאזור מגורים:%0D%0A"
+          href="mailto:rachel@mindcet.io?subject=הגשת מועמדות – מנחה מוביל/ה ב-Mindcet&body=שלום רחל,%0D%0Aמצורפים קורות החיים שלי לתפקיד מנחה מוביל/ה ב-Mindcet.%0D%0A%0D%0Aשם:%0D%0Aטלפון:%0D%0Aאזור מגורים:%0D%0A"
           className="mt-8 inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold px-6 py-3 rounded-full hover:opacity-90 transition shadow-[0_10px_40px_-10px_oklch(0.78_0.18_55/0.6)]"
         >
           להגשת מועמדות ←
@@ -76,9 +76,9 @@ function Careers() {
         <div className="grid md:grid-cols-[1fr_1.3fr] gap-8 items-center">
           <img src={img} alt="מנחה מיינדסט" className="rounded-3xl w-full aspect-[4/5] object-cover border border-white/10" />
           <div>
-            <h2 className="text-3xl md:text-4xl">למה MindCET?</h2>
+            <h2 className="text-3xl md:text-4xl">למה Mindcet?</h2>
             <p className="mt-5 text-muted-foreground leading-relaxed text-lg">
-              MindCET היא חממת האדטק הראשונה שהוקמה בעולם. אנו מפגישים יזמים, חוקרים
+              Mindcet היא חממת האדטק הראשונה שהוקמה בעולם. אנו מפגישים יזמים, חוקרים
               ואנשי חינוך כדי לפרוץ את הפרדיגמה המסורתית של עולם החינוך ולפתח פתרונות
               טכנולוגיים-חינוכיים רלוונטיים ללומדים ומלמדים בעולם דיגיטלי. מיינדסט
               נחשבת לחלוצה בינלאומית בתחום ומשמשת מוקד עלייה לרגל לארגונים ולמרכזי
@@ -97,7 +97,7 @@ function Careers() {
           <div className="absolute -top-16 right-10 w-40 h-40 rounded-full" style={{ background: "var(--primary)", filter: "blur(60px)", opacity: 0.4 }} />
           <h2 className="text-3xl md:text-4xl">להגשת מועמדות</h2>
           <p className="mt-4 text-muted-foreground">שלחו קורות חיים אל:</p>
-          <a href="mailto:rachel@mindcet.io?subject=הגשת מועמדות – מנחה מוביל/ה ב-MindCET" className="mt-3 inline-block text-3xl font-black text-primary hover:underline break-all">
+          <a href="mailto:rachel@mindcet.io?subject=הגשת מועמדות – מנחה מוביל/ה ב-Mindcet" className="mt-3 inline-block text-3xl font-black text-primary hover:underline break-all">
             rachel@mindcet.io
           </a>
         </div>
