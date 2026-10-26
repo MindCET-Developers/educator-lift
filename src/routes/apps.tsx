@@ -10,13 +10,13 @@ export const Route = createFileRoute("/apps")({
   loader: ({ context }) => context.queryClient.ensureQueryData(eventProjectsOptions),
   head: () => ({
     meta: [
-      { title: "אפליקציות מורים – Unboxing Challenge | MindCET" },
+      { title: "אפליקציות מורים – Unboxing Challenge | Mindcet" },
       {
         name: "description",
         content:
-          "גלריית האפליקציות שפיתחו מורות ומורים בהכשרות Vibe Coding של MindCET – פתרונות EdTech אמיתיים מהכיתה.",
+          "גלריית האפליקציות שפיתחו מורות ומורים בהכשרות Vibe Coding של Mindcet – פתרונות EdTech אמיתיים מהכיתה.",
       },
-      { property: "og:title", content: "גלריית אפליקציות המורים | MindCET" },
+      { property: "og:title", content: "גלריית אפליקציות המורים | Mindcet" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -174,7 +174,7 @@ function Apps() {
           <span className="block text-white">שאף סטארטאפ לא חשב עליו.</span>
         </h1>
         <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-          {totalApps} פתרונות שפיתחו מורות ומורים בהכשרות Vibe Coding של MindCET — מירוחם ורמת נגב, מקרית מלאכי וחריש,
+          {totalApps} פתרונות שפיתחו מורות ומורים בהכשרות Vibe Coding של Mindcet — מירוחם ורמת נגב, מקרית מלאכי וחריש,
           מרהט וחיפה. כל אפליקציה התחילה מאתגר אמיתי בכיתה, ונבנתה ברצף קצר של אפיון, פרומפט, MVP וטסט.
         </p>
       </section>

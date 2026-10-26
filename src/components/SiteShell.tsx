@@ -1,5 +1,5 @@
 import { Link, Outlet, useRouter } from "@tanstack/react-router";
-import logo from "@/assets/mindcet-logo.png";
+import logo from "@/assets/mindcet-labs.png.asset.json";
 
 const moonaLogo = "/media/moona-logo.png";
 const pisgaLogo = "/media/pisga-akko-logo.png";
@@ -42,7 +42,7 @@ export default function SiteShell() {
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-3">
             <div className="bg-white rounded-lg px-3 py-2">
-              <img src={logo} alt="MindCET" className="h-7 w-auto" />
+              <img src={logo.url} alt="Mindcet" className="h-7 w-auto" />
             </div>
             {isWesternGalilee && (
               <div className="hidden md:flex items-center gap-3">
@@ -96,7 +96,7 @@ export default function SiteShell() {
       <footer className="border-t border-border/60 bg-background/60 mt-20">
         <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-3">
-            <div className="bg-white rounded-md px-2 py-1"><img src={logo} alt="MindCET" className="h-5" /></div>
+            <div className="bg-white rounded-md px-2 py-1"><img src={logo.url} alt="Mindcet" className="h-5" /></div>
             <span>{"\n"}</span>
           </div>
           <div>

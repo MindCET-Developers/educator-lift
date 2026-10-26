@@ -14,8 +14,8 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Unboxing Challenge | הכשרה לפסג\"ות, מועצות ורשתות חינוך" },
-      { name: "description", content: "10 מפגשים בהם מורים מפתחים פתרון AI לאתגר פדגוגי מקומי. תכנית הכשרה של MindCET לפסג\"ות, מועצות מקומיות ורשתות חינוך." },
-      { property: "og:title", content: "Unboxing Challenge | MindCET" },
+      { name: "description", content: "10 מפגשים בהם מורים מפתחים פתרון AI לאתגר פדגוגי מקומי. תכנית הכשרה של Mindcet לפסג\"ות, מועצות מקומיות ורשתות חינוך." },
+      { property: "og:title", content: "Unboxing Challenge | Mindcet" },
       { property: "og:description", content: "הכשרה לפיתוח פתרונות AI לאתגרים פדגוגיים – לפסג\"ות, מועצות ורשתות חינוך." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -143,7 +143,7 @@ function Home() {
           <div>
             <SectionTitle eyebrow="מה זה Unboxing Challenge?" title="מפתחים פתרון אמיתי. בלי קוד." align="start" />
             <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
-              מהלך פדגוגי חדשני של MindCET שמשלב גישת סטארטאפ, חשיבה עיצובית וכלי AI מתקדמים.
+              מהלך פדגוגי חדשני של Mindcet שמשלב גישת סטארטאפ, חשיבה עיצובית וכלי AI מתקדמים.
               המורים מזקקים אתגר פדגוגי מקומי, מתכננים פתרון, מפתחים אותו בעזרת Vibe Coding,
               ומריצים פיילוט אמיתי בכיתה.
             </p>

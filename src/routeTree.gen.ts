@@ -9,32 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WesternGalileeRouteImport } from './routes/western-galilee'
-import { Route as TeachersRouteImport } from './routes/teachers'
-import { Route as CareersRouteImport } from './routes/careers'
-import { Route as AshkelonCoastRouteImport } from './routes/ashkelon-coast'
-import { Route as AppsRouteImport } from './routes/apps'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AppsRouteImport } from './routes/apps'
+import { Route as AshkelonCoastRouteImport } from './routes/ashkelon-coast'
+import { Route as CareersRouteImport } from './routes/careers'
+import { Route as TeachersRouteImport } from './routes/teachers'
+import { Route as WesternGalileeRouteImport } from './routes/western-galilee'
 import { Route as ApiPublicEventProjectImageRouteImport } from './routes/api/public/event-project-image'
 
-const WesternGalileeRoute = WesternGalileeRouteImport.update({
-  id: '/western-galilee',
-  path: '/western-galilee',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TeachersRoute = TeachersRouteImport.update({
-  id: '/teachers',
-  path: '/teachers',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CareersRoute = CareersRouteImport.update({
-  id: '/careers',
-  path: '/careers',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AshkelonCoastRoute = AshkelonCoastRouteImport.update({
-  id: '/ashkelon-coast',
-  path: '/ashkelon-coast',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppsRoute = AppsRouteImport.update({
@@ -42,9 +27,24 @@ const AppsRoute = AppsRouteImport.update({
   path: '/apps',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const AshkelonCoastRoute = AshkelonCoastRouteImport.update({
+  id: '/ashkelon-coast',
+  path: '/ashkelon-coast',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeachersRoute = TeachersRouteImport.update({
+  id: '/teachers',
+  path: '/teachers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WesternGalileeRoute = WesternGalileeRouteImport.update({
+  id: '/western-galilee',
+  path: '/western-galilee',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiPublicEventProjectImageRoute =
@@ -124,32 +124,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/western-galilee': {
-      id: '/western-galilee'
-      path: '/western-galilee'
-      fullPath: '/western-galilee'
-      preLoaderRoute: typeof WesternGalileeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/teachers': {
-      id: '/teachers'
-      path: '/teachers'
-      fullPath: '/teachers'
-      preLoaderRoute: typeof TeachersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/careers': {
-      id: '/careers'
-      path: '/careers'
-      fullPath: '/careers'
-      preLoaderRoute: typeof CareersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ashkelon-coast': {
-      id: '/ashkelon-coast'
-      path: '/ashkelon-coast'
-      fullPath: '/ashkelon-coast'
-      preLoaderRoute: typeof AshkelonCoastRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/apps': {
@@ -159,11 +138,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/ashkelon-coast': {
+      id: '/ashkelon-coast'
+      path: '/ashkelon-coast'
+      fullPath: '/ashkelon-coast'
+      preLoaderRoute: typeof AshkelonCoastRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teachers': {
+      id: '/teachers'
+      path: '/teachers'
+      fullPath: '/teachers'
+      preLoaderRoute: typeof TeachersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/western-galilee': {
+      id: '/western-galilee'
+      path: '/western-galilee'
+      fullPath: '/western-galilee'
+      preLoaderRoute: typeof WesternGalileeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/event-project-image': {
